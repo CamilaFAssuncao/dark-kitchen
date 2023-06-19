@@ -1,4 +1,4 @@
-let dishesObject = [
+
   {
     itemPic: "salmonpoke.png",
     itemName: "Salmon Poke ",
@@ -34,4 +34,3 @@ let dishesObject = [
       "Vinegared rice base, veggie chicken, avocado, mango, edamame, cucumber, cashew nuts, thai cebette and sesame.",
     itemPrice: "11,95",
   },
-];
