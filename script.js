@@ -18,12 +18,12 @@ itemPic: "falafelpoke.png",
     itemName: "Falafel Poke ",
     itemTags: ["vegetarian","gluten-free"],
     itemDescription: "Choice of base, falafels depending , grenade , radish, carrot, avocado, edamame, cucumber, red cabbage, sesame seeds and raspberry.Served with the sauce of your choice",
-    itemPrice: "12,95",  },
+    itemPrice: "10,95",  },
 
 {
 itemPic: "veggiechicken.png",
     itemName: "Veggie Chicken Poke ",
     itemTags: ["vegan","vegetarian","gluten-free"],
     itemDescription: "Vinegared rice base, veggie chicken, avocado, mango, edamame, cucumber, cashew nuts, thai cebette and sesame.",
-    itemPrice: "12,95",  }
+    itemPrice: "11,95",  }
 ]
