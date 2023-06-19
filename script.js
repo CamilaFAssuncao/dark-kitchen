@@ -3,7 +3,7 @@ const itemsObject = [
         itemPic: "berry.png",
         itemName: "Berry & Bright",
         itemTags: ["Juice, Vegan, Organic, Gluten-free"],
-        itemDescription: ["Delicious berries and wholesome ingredients such as carrots and bilberries to brighten up your day: Tart cherry, Carrot, Blackberry, Pomegranate, Bilberry, Cranberry, Acai"], 
+        itemDescription: ["Delicious berries and wholesome ingredients such as carrots and blueberries to brighten up your day: Tart cherry, Carrot, Blackberry, Pomegranate, Blueberry, Cranberry, Açaí"], 
         itemPrice: ["Add for 5€"],
     },
 
@@ -11,7 +11,7 @@ const itemsObject = [
         itemPic: "green.png",
         itemName: "Clean & Green",
         itemTags: ["Juice, Vegan, Organic, Gluten-free"],
-        itemDescription: ["A refreshing boost in a bottle with those daily vitamins and minerals you need for a great day : Kale, Cucumber, Apple, Spinach, Mint, Celery, Lime, Parsleyn"], 
+        itemDescription: ["A refreshing boost in a bottle with those daily vitamins and minerals you need for a great day : Kale, Cucumber, Apple, Spinach, Mint, Celery, Lime, Parsley"], 
         itemPrice: ["Add for 5€"],
     },
 
@@ -27,7 +27,7 @@ const itemsObject = [
         itemPic: "tropical.png",
         itemName: "Tropical Glow",
         itemTags: ["Juice, Vegan, Organic, Gluten-free"],
-        itemDescription: ["A blend of tropical fruit with revitalizing coconut water : Pineapple, Orange, Banana, Apple Mango, Passionfruit, Coconut water"], 
+        itemDescription: ["A blend of tropical fruit with revitalizing coconut water : Pineapple, Orange, Banana, Apple, Mango, Passionfruit, Coconut water"], 
         itemPrice: ["Add for 5€"],
     },
 
@@ -108,7 +108,7 @@ const itemsObject = [
   },
 
   {
-    itemPic: "veggiechicken.png",
+    itemPic: "veggiechickenpoke.png",
     itemName: "Veggie Chicken Poke ",
     itemTags: ["main course", "vegan", "vegetarian", "gluten-free"],
     itemDescription: ["Vinegared rice base, veggie chicken, avocado, mango, edamame, cucumber, cashew nuts, thai cebette and sesame."],
@@ -146,6 +146,7 @@ const itemsObject = [
   
     const price = document.createElement("button");
     price.textContent = itemPrice;
+    price.classList.add("priceButton");
     card.appendChild(price);
   
     dishesContainer.appendChild(card);
@@ -165,3 +166,19 @@ const itemsObject = [
   
   generateItemsObject();
   
+// const buttons = document.querySelectorAll(".priceButton");
+
+// document.querySelectorAll(".priceButton").addEventListener("click")
+
+//   priceButton.forEach(button => {
+//     button.addEventListener('click', () => {}
+
+const priceButtons = document.querySelectorAll(".priceButton");
+
+priceButtons.forEach(function(button) {
+  button.addEventListener("click", myFunction);
+});
+
+function myFunction() {
+  alert("Hello World!");
+}
