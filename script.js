@@ -84,7 +84,7 @@ const itemsObject = [
         itemPrice: "€4"
       },
     {
-    itemPic: "edamame.png",
+    itemPic: "edamame.jpg",
     itemName: "Edamame",
     itemTags: ["side","vegan", "vegetarian", "dairy-free","gluten-free"],
     itemDescription: "immature green soybeans",
