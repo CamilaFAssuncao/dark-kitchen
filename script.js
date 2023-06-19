@@ -1,33 +1,139 @@
+// const itemsObject = [
+//     {
+//         itemPic: "mushroom.png",
+//         itemName: "Shimeji and Shitake",
+//         itemTags: ["starter","vegan", "vegetarian", "dairyfree", "gluten-free"],
+//         itemDescription: ["Stir-fry mushrooms in olive oil with saké and soy sauce."],
+//         itemPrice: "6e"},
+
+//     {
+//             itemPic: "sunomono.png",
+//             itemName: "Sunomono",
+//             itemTags: ["starter", "vegan", "vegetarian", "dairyfree", "gluten-free"],
+//             itemDescription: ["Cumcuber salad marinated in rice vinegar."],
+//             itemPrice: "4e"},
+
+//     {
+//                 itemPic: "sweetpotato.png",
+//                 itemName: ["Sweet potato chips"],
+//                 itemTags: ["starter","vegan", "vegetarian", "dairyfree", "gluten-free"],
+//                 itemDescription: ["Baked sweet potato chips."],
+//                 itemPrice: "4e"},
+
+//     {
+//                     itemPic: "shrimp.png",
+//                     itemName: ["Honey Garlic and Pineapple Shrimp Skewers"],
+//                     itemTags: ["starter","dairyfree", "gluten-free"],
+//                     itemDescription: ["Succulent shrimp and juicy pineapple chunks grilled, coated in a sweet and savory honey garlic glaze"],
+//                     itemPrice: "8e"}
+            
+
+// ];
+
+// const dishesContainer = document.querySelector(".cardCollection");
+
+// const displayCollection = (
+//     itemPic, 
+//     itemName, 
+//     itemTags, 
+//     itemDescription, 
+//     itemPrice
+//     ) => {
+
+//     }
+
+
+// const generateItemsObject = () => {
+//     itemsObject.forEach((dishes) => {
+//             displayCollection(
+//                 dishes.itemPic,
+//                 dishes.itemName,
+//                 dishes.itemTags,
+//                 dishes.itemDescription,
+//                 dishes.itemPrice
+//             );
+//         });
+// };
+
+// generateItemsObject();
+
 const itemsObject = [
     {
-        itemPic: "mushroom.png",
-        itemName: "Shimeji and Shitake",
-        itemTags: ["vegan", "vegetarian", "dairyfree", "gluten-free"],
-        itemDescription: ["Stir-fry mushrooms in olive oil with saké and soy sauce."],
-        itemPrice: "6e",  },
-
+      itemPic: "mushroom.png",
+      itemName: "Shimeji and Shitake",
+      itemTags: ["starter","vegan", "vegetarian", "dairyfree", "gluten-free"],
+      itemDescription: ["Stir-fry mushrooms in olive oil with saké and soy sauce."],
+      itemPrice: "6e"
+    },
     {
-            itemPic: "sunomono.png",
-            itemName: "Sunomono",
-            itemTags: ["vegan", "vegetarian", "dairyfree", "gluten-free"],
-            itemDescription: ["Cumcuber salad marinated in rice vinegar."],
-            itemPrice: "4e",  },
-
+      itemPic: "sunomono.png",
+      itemName: "Sunomono",
+      itemTags: ["starter", "vegan", "vegetarian", "dairyfree", "gluten-free"],
+      itemDescription: ["Cumcuber salad marinated in rice vinegar."],
+      itemPrice: "4e"
+    },
     {
-                itemPic: "sweetpotato.png",
-                itemName: ["Sweet potato chips"],
-                itemTags: ["vegan", "vegetarian", "dairyfree", "gluten-free"],
-                itemDescription: ["Baked sweet potato chips."],
-                itemPrice: "4e",  },
-
+      itemPic: "sweetpotato.png",
+      itemName: "Sweet potato chips",
+      itemTags: ["starter","vegan", "vegetarian", "dairyfree", "gluten-free"],
+      itemDescription: ["Baked sweet potato chips."],
+      itemPrice: "4e"
+    },
     {
-                    itemPic: "shrimp.png",
-                    itemName: ["Honey Garlic and Pineapple Shrimp Skewers"],
-                    itemTags: ["dairyfree", "gluten-free"],
-                    itemDescription: ["Succulent shrimp and juicy pineapple chunks grilled, coated in a sweet and savory honey garlic glaze"],
-                    itemPrice: "8e",  }
-            
-        
-    
-
-]
+      itemPic: "shrimp.png",
+      itemName: "Honey Garlic and Pineapple Shrimp Skewers",
+      itemTags: ["starter","dairyfree", "gluten-free"],
+      itemDescription: ["Succulent shrimp and juicy pineapple chunks grilled, coated in a sweet and savory honey garlic glaze"],
+      itemPrice: "8e"
+    }
+  ];
+  
+  const dishesContainer = document.querySelector(".cardCollection");
+  
+  const displayCollection = (
+    itemPic,
+    itemName,
+    itemTags,
+    itemDescription,
+    itemPrice
+  ) => {
+    const card = document.createElement("div");
+    card.classList.add("card");
+  
+    const image = document.createElement("img");
+    image.src = itemPic;
+    card.appendChild(image);
+  
+    const name = document.createElement("h2");
+    name.textContent = itemName;
+    card.appendChild(name);
+  
+    const tags = document.createElement("p");
+    tags.textContent = itemTags.join(", ");
+    card.appendChild(tags);
+  
+    const description = document.createElement("p");
+    description.textContent = itemDescription.join(", ");
+    card.appendChild(description);
+  
+    const price = document.createElement("p");
+    price.textContent = itemPrice;
+    card.appendChild(price);
+  
+    dishesContainer.appendChild(card);
+  };
+  
+  const generateItemsObject = () => {
+    itemsObject.forEach((dishes) => {
+      displayCollection(
+        dishes.itemPic,
+        dishes.itemName,
+        dishes.itemTags,
+        dishes.itemDescription,
+        dishes.itemPrice
+      );
+    });
+  };
+  
+  generateItemsObject();
+  
