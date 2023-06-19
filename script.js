@@ -83,6 +83,12 @@ const itemsObject = [
         itemDescription: ["Spam Musubi with Egg is a delicious Hawaiian dish consisting of grilled Spam, a slice of omelette, and sticky rice, wrapped in a sheet of nori seaweed."],
         itemPrice: "€4"
       },
+    {
+    itemPic: "edamame.png",
+    itemName: "Edamame",
+    itemTags: ["side","vegan", "vegetarian", "dairy-free","gluten-free"],
+    itemDescription: "immature green soybeans",
+    itemPrice: "4,6",  },
    {
     itemPic: "salmonpoke.png",
     itemName: "Salmon Poke ",
