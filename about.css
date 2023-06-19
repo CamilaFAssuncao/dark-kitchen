@@ -3,22 +3,27 @@
   margin-bottom: 100px;
 }
 .aboutUsPic img {
-  width: 279 px;
+  width: 300px;
   height: 280px;
   margin: 50px;
-  margin-left: 50px;
-  margin-right: 70px;
+  margin-left: 80px;
+  margin-right: 30px;
+}
+.aboutUsPic {
+  width: 35%;
 }
 
 .aboutext {
-  display: block;
+  display: inline-block;
+  width: 65%;
+  margin-right: 100px;
 }
 
 .titleAbout {
-  height: 172px;
+  height: 100px;
 }
 .titleAbout h1 {
-  font-size: 60px;
+  font-size: 50px;
   margin-bottom: 5px;
   margin-top: 10px;
 }
