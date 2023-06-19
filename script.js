@@ -58,11 +58,11 @@ const itemsObject = [
     card.appendChild(name);
   
     const tags = document.createElement("p");
-    tags.textContent = itemTags.join(", ");
+    tags.textContent = itemTags;
     card.appendChild(tags);
   
     const description = document.createElement("p");
-    description.textContent = itemDescription.join(", ");
+    description.textContent = itemDescription;
     card.appendChild(description);
   
     const price = document.createElement("p");
