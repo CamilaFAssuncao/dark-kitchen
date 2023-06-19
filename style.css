@@ -8,10 +8,15 @@ img {
 }
 
 body {
-    background-color: #04371D;
+    background-color: #3a563e;
+    color: #f7eae6;
 }
 
 .dishesObject {
     background-color: #E1D7DB
     ;
+}
+
+i {
+    color: #f7eae6;
 }

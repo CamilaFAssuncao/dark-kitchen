@@ -63,29 +63,37 @@ const itemsObject = [
       itemName: "Shimeji and Shitake",
       itemTags: ["starter","vegan", "vegetarian", "dairyfree", "gluten-free"],
       itemDescription: ["Stir-fry mushrooms in olive oil with saké and soy sauce."],
-      itemPrice: "6e"
+      itemPrice: "€6"
     },
     {
       itemPic: "sunomono.png",
       itemName: "Sunomono",
       itemTags: ["starter", "vegan", "vegetarian", "dairyfree", "gluten-free"],
       itemDescription: ["Cumcuber salad marinated in rice vinegar."],
-      itemPrice: "4e"
+      itemPrice: "€4"
     },
     {
       itemPic: "sweetpotato.png",
       itemName: "Sweet potato chips",
       itemTags: ["starter","vegan", "vegetarian", "dairyfree", "gluten-free"],
       itemDescription: ["Baked sweet potato chips."],
-      itemPrice: "4e"
+      itemPrice: "€4"
     },
     {
       itemPic: "shrimp.png",
       itemName: "Honey Garlic and Pineapple Shrimp Skewers",
       itemTags: ["starter","dairyfree", "gluten-free"],
       itemDescription: ["Succulent shrimp and juicy pineapple chunks grilled, coated in a sweet and savory honey garlic glaze"],
-      itemPrice: "8e"
-    }
+      itemPrice: "€8"
+    },
+
+    {
+        itemPic: "musubi.png",
+        itemName: "Spam Musubi with Egg",
+        itemTags: ["side dish","dairyfree", "gluten-free"],
+        itemDescription: ["Spam Musubi with Egg is a delicious Hawaiian dish consisting of grilled Spam, a slice of omelette, and sticky rice, wrapped in a sheet of nori seaweed."],
+        itemPrice: "€4"
+      }
   ];
   
   const dishesContainer = document.querySelector(".cardCollection");
