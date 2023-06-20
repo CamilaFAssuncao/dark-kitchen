@@ -52,3 +52,16 @@ header {
     justify-content: space-between;
 
 }
+
+.logoimage {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.lemonlogo {
+    width: 150px;
+    height: fit-content;
+    margin-top: 30px;
+    margin-left: 30px;
+}
