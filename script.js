@@ -3,7 +3,7 @@ const itemsObject = [
         itemPic: "berry.png",
         itemName: "Berry & Bright",
         itemTags: ["Juice, Vegan, Organic, Gluten-free"],
-        itemDescription: ["Delicious berries and wholesome ingredients such as carrots and blueberries to brighten up your day: Tart cherry, Carrot, Blackberry, Pomegranate, Blueberry, Cranberry, Açaí"], 
+        itemDescription: ["Delicious berries and wholesome ingredients such as carrots and blueberries to brighten up your day: Tart cherry, Carrot, Blackberry, Pomegranate, Blueberry, Cranberry, Açaí."], 
         itemPrice: ["5€"],
         addToCart : ["Add to cart"]
     },
@@ -12,7 +12,7 @@ const itemsObject = [
         itemPic: "green.png",
         itemName: "Clean & Green",
         itemTags: ["Juice, Vegan, Organic, Gluten-free"],
-        itemDescription: ["A refreshing boost in a bottle with those daily vitamins and minerals you need for a great day : Kale, Cucumber, Apple, Spinach, Mint, Celery, Lime, Parsley"], 
+        itemDescription: ["A refreshing boost in a bottle with those daily vitamins and minerals you need for a great day : Kale, Cucumber, Apple, Spinach, Mint, Celery, Lime, Parsley."], 
         itemPrice: ["5€"],
         addToCart : ["Add to cart"]
     },
@@ -21,7 +21,7 @@ const itemsObject = [
         itemPic: "red.png",
         itemName: "Restoration Red",
         itemTags: ["Juice, Vegan, Organic, Gluten-free"],
-        itemDescription: ["A combination of red fruits to bring you flavor and sustenance : Tomato, Tart cherry, Beet, Strawberry, Apple, Lime"], 
+        itemDescription: ["A combination of red fruits to bring you flavor and sustenance : Tomato, Tart cherry, Beet, Strawberry, Apple, Lime."], 
         itemPrice: ["5€"],
         addToCart : ["Add to cart"]
     },
@@ -30,7 +30,7 @@ const itemsObject = [
         itemPic: "tropical.png",
         itemName: "Tropical Glow",
         itemTags: ["Juice, Vegan, Organic, Gluten-free"],
-        itemDescription: ["A blend of tropical fruit with revitalizing coconut water : Pineapple, Orange, Banana, Apple, Mango, Passionfruit, Coconut water"], 
+        itemDescription: ["A blend of tropical fruit with revitalizing coconut water : Pineapple, Orange, Banana, Apple, Mango, Passionfruit, Coconut water."], 
         itemPrice: ["5€"],
         addToCart : ["Add to cart"]
     },
@@ -72,7 +72,7 @@ const itemsObject = [
     itemPic: "edamame.png",
     itemName: "Edamame",
     itemTags: ["side","vegan", "dairy-free","gluten-free"],
-    itemDescription: "immature green soybeans",
+    itemDescription: ["Nutritious and flavorful young soybean pods, lightly seasoned with salt, perfect as an appetizer or snack."],
     itemPrice: ["€4"],
     addToCart : ["Add to cart"]
 },
@@ -81,7 +81,7 @@ const itemsObject = [
     itemPic: "salmonpoke.png",
     itemName: "Salmon Poke ",
     itemTags: ["main course", "fish"],
-    itemDescription: ["Choice of base, fresh salmon, mango or pineapple, radish, cucumber, red cabbage, avocado, edamame, sesame seeds.Served with the sauce of your choice."],
+    itemDescription: ["Vinegared rice base, fresh salmon, mango or pineapple, radish, cucumber, red cabbage, avocado, edamame, sesame seeds. Served with Teriyaki sauce."],
     itemPrice: ["€13"],
     addToCart : ["Add to cart"]
   },
@@ -90,7 +90,7 @@ const itemsObject = [
     itemPic: "tunapoke.png",
     itemName: "Tuna Poke",
     itemTags: ["main course", "fish"],
-    itemDescription: ["Choice of marinated tuna, mango or pineapple, radish, cucumber, red cabbage, avocado, edamame, sesame seeds.Served with the sauce of your choice."],
+    itemDescription: ["Vinegared rice base, marinated tuna, mango or pineapple, radish, cucumber, red cabbage, avocado, edamame, sesame seeds. Served with Ponzu dressing."],
     itemPrice: ["€13"],
     addToCart : ["Add to cart"]
   },
@@ -99,7 +99,7 @@ const itemsObject = [
     itemPic: "falafelpoke.png",
     itemName: "Falafel Poke ",
     itemTags: ["main course", "vegetarian", "gluten-free"],
-    itemDescription: ["Choice of base, falafels depending , grenade , radish, carrot, avocado, edamame, cucumber, red cabbage, sesame seeds and raspberry.Served with the sauce of your choice"],
+    itemDescription: ["Vinegared rice base, falafels, grenade , radish, carrot, avocado, edamame, cucumber, red cabbage, sesame seeds and raspberry. Served with Wasabi mayo."],
     itemPrice: ["€11"],
     addToCart : ["Add to cart"]
   },
