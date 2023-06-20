@@ -124,7 +124,7 @@ const itemsObject = [
 
 {
     itemPic: "fruits.png",
-    itemName: "Fuit Ninja",
+    itemName: "Fruit Ninja",
     itemTags: ["Dessert", "Vegan"],
     itemDescription: ["Our exotic fruit salad brings a touch of freshness with its chunks of fresh mango, pomegranate and pineapple"], 
     itemPrice: ["5€"],
@@ -189,14 +189,16 @@ const itemsObject = [
   
   generateItemsObject();
   
-  const cartIcon = document.getElementById("cartIcon");
-  const cartPopup = document.getElementById("cartPopup");
+  document.addEventListener("DOMContentLoaded", function() {
+    const shoppingCartIcon = document.getElementById("cartIcon");
+    const shoppingCartPopup = document.getElementById("cartPopUp");
   
-  cartIcon.addEventListener("click", function() {
-    // Exibir a pop-up do carrinho de compras
-    cartPopup.style.display = "block";
+    shoppingCartIcon.addEventListener("click", function() {
+      if (shoppingCartPopup) {
+        shoppingCartPopup.style.display = "block";
+      }
+    });
   });
-  
 
 // const buttons = document.querySelectorAll(".priceButton");
 
@@ -269,3 +271,6 @@ const itemsObject = [
 //   });
 // }
 
+
+  
+  

@@ -2,19 +2,13 @@ img {
     width: 300px;
 }
 
-.dishes {
-    border: solid black;
-
-}
-
 body {
     background-color: #3a563e;
     color: #f7eae6;
 }
 
 .dishesObject {
-    background-color: #E1D7DB
-    ;
+    background-color: #E1D7DB;
 }
 
 i {
@@ -66,20 +60,15 @@ header {
     margin-left: 30px;
 }
 
-.lightlogo {
-    display: none;
+.namelogo {
+    width: 300px;
 }
 
-/* .light-mode .logo {
-    content: url('lightlogo.png');
+  #cartPopUp {
+    display: none;
+    background-color:#f7eae6;
+    color: #3a563e;
   }
-  
-  .dark-mode .logo {
-    content: url('logo.png');
-  } */
-  
-
-  
 
 @media screen and (max-width: 768px) {
 .lemonlogo {
@@ -87,7 +76,7 @@ header {
     margin-left: 20px;
 }
 
-.logo {
+.namelogo {
     width: 220px;
 }
 
@@ -95,5 +84,4 @@ i {
     margin-top: 60px;
     margin-right: 40px;
 }
-
 }
