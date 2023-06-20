@@ -33,10 +33,15 @@ body {
     background-color: white;
     color: #2f5c33;
     width: 300px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     overflow: scroll;
     font-family: 'Montserrat', sans-serif;
     text-align: justify;
+}
+
+.card:hover {
+    transform: scale(1.06);
+    transition: all 0.5s ease-in-out 0s;
 }
 
 .switchcart {
@@ -114,9 +119,10 @@ header {
 }
 
 #search {
-    color: #ffde3d;
+    color: #d2b3b7;
     cursor: pointer;
     font-size: 22px;
+    font-weight: bold;
 }
 
 .button-value {
@@ -128,7 +134,7 @@ header {
 }
 
 .button-value:hover {
-    background-color: #9ead9b;
+    background-color: #d2b3b7;
 }
 
 @media screen and (max-width: 768px) {
