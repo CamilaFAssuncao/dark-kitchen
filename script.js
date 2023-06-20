@@ -68,14 +68,6 @@ const itemsObject = [
       addToCart : ["Add to cart"]
     },
 
-    {
-        itemPic: "musubi.png",
-        itemName: "Spam Musubi with Egg",
-        itemTags: ["side dish","dairyfree", "gluten-free"],
-        itemDescription: ["Spam Musubi with Egg is a delicious Hawaiian dish consisting of grilled Spam, a slice of omelette, and sticky rice, wrapped in a sheet of nori seaweed."],
-        itemPrice: ["€4"],
-        addToCart : ["Add to cart"]
-      },
    {
     itemPic: "salmonpoke.png",
     itemName: "Salmon Poke ",
@@ -109,6 +101,15 @@ const itemsObject = [
     itemTags: ["main course", "vegan", "vegetarian", "gluten-free"],
     itemDescription: ["Vinegared rice base, veggie chicken, avocado, mango, edamame, cucumber, cashew nuts, thai cebette and sesame."],
     itemPrice: ["€12"],
+    addToCart : ["Add to cart"]
+  },
+
+  {
+    itemPic: "musubi.png",
+    itemName: "Spam Musubi with Egg",
+    itemTags: ["side dish","dairyfree", "gluten-free"],
+    itemDescription: ["Spam Musubi with Egg is a delicious Hawaiian dish consisting of grilled Spam, a slice of omelette, and sticky rice, wrapped in a sheet of nori seaweed."],
+    itemPrice: ["€4"],
     addToCart : ["Add to cart"]
   },
 

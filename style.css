@@ -1,5 +1,5 @@
 img {
-    width: 200px;
+    width: 300px;
 }
 
 .dishes {
@@ -19,6 +19,8 @@ body {
 
 i {
     color: #f7eae6;
+    margin-top: 100px;
+    margin-right: 40px;
 }
 
 .card {
@@ -42,4 +44,11 @@ i {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
 }
