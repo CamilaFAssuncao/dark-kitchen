@@ -70,6 +70,7 @@ body {
     font-size: 1em;
     font-weight: bold;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 header {
@@ -102,12 +103,12 @@ header {
 }
 
 #cartPopUp {
-    background-color: #f7eae6;
+    background-color: #9ead9b;;
     color: #3a563e;
     position: absolute;
     top: 0;
     right: 0;
-    display: block;
+    display: none;
     margin-top: 100px;
     margin-right: 2%;
     padding: 20px;
@@ -120,12 +121,22 @@ header {
     flex-wrap: wrap;
     margin-bottom: 10px;
     flex-direction: column;
-    padding-left: 2%;
+    margin: 2%;
+    align-items: flex-start;
     
+}
+
+#search-container {
+    margin-left: 12px;
 }
 
 #buttons {
     margin-left: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    
 }
 .button-value, #search, #search-input {
     font-size: 16px;
@@ -155,6 +166,11 @@ header {
     background-color: #d2b3b7;
 }
 
+.counter, button {
+    border: none;
+    border-radius: 100px;
+    display: flex;
+}
 
 /* may not necessary anymore */
 /* @media screen and (max-width: 768px) {

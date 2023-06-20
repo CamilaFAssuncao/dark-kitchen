@@ -142,6 +142,7 @@ const itemsObject = [
   ];
   
   const dishesContainer = document.querySelector(".cardCollection");
+  const shoppingCart = document.getElementById("cartPopUp")
   
   const displayCollection = (
     itemPic,
@@ -199,6 +200,8 @@ const itemsObject = [
     });
   };
   
+//filtering itens
+
   const displayFilteredItems = (items) => {
     generateItemsObject(items);
   };
@@ -207,7 +210,7 @@ const itemsObject = [
   
   const searchInput = document.getElementById("search-input");
   const searchButton = document.getElementById("search");
-  
+
   searchButton.addEventListener("click", () => {
     const searchTerm = searchInput.value.toLowerCase();
     const filteredItems = itemsObject.filter((item) =>
@@ -218,6 +221,26 @@ const itemsObject = [
   });
 
 
+//attempt to filter any word within the array  
+//   const searchButton = document.getElementById("search");
+//   searchButton.addEventListener("click", () => {
+//     const searchInput = document.getElementById("search-input").value.toLowerCase();
+//     const filteredItems = itemsObject.filter((item) => {
+//       // Verifica se algum valor das propriedades do item contém o termo de pesquisa
+//       return Object.values(item).some((value) => {
+//         if (typeof value === "string") {
+//           return value.toLowerCase().includes(searchInput);
+//         }
+//         return false;
+//       });
+//     });
+  
+//     displayFilteredItems(filteredItems);
+//   });
+//attempt to filter any word within the array    
+
+
+  
 ////////// Darkmodeswitch //////////////
 
 const checkbox = document.getElementById("checkbox");
@@ -231,6 +254,8 @@ checkbox.addEventListener("change", () => {
 //The arrow function () => { ... } is the callback function that runs when the checkbox's "change" event occurs.
 
 //Inside the callback function, document.body.classList.toggle("light") toggles the "light" class on the body element. The classList property provides access to the class attributes of an element. The toggle() method adds the "light" class to the body element if it is not present, and removes it if it is already present. This way, each time the checkbox is checked or unchecked, the "light" class is added or removed from the body element, effectively toggling the light mode.
+
+//displaying shopping cart
 
 document.addEventListener("DOMContentLoaded", function() {
     const shoppingCartIcon = document.getElementById("cartIcon");
@@ -248,92 +273,73 @@ document.addEventListener("DOMContentLoaded", function() {
   });
   
 
-
-
-  //ATTEMPT
-  
-//   const generateItemsObject = () => {
-//     itemsObject.forEach((dishes) => {
-//       displayCollection(
-//         dishes.itemPic,
-//         dishes.itemName,
-//         dishes.itemTags,
-//         dishes.itemDescription,
-//         dishes.itemPrice,
-//         dishes.addToCart
-//       );
-//     });
-
-//   };
-  
-//   generateItemsObject();
-
-//     const searchInput = document.getElementById("search-input");
-//     const searchButton = document.getElementById("search");
-  
-//     searchButton.addEventListener("click", () => {
-//       const searchTerm = searchInput.value.toLowerCase();
-//       const filteredItems = itemsObject.filter((item) =>
-//         item.itemName.toLowerCase().includes(searchTerm)
-//       );
-  
-//       displayFilteredItems(filteredItems);
-//     });
-  
-//     // Display all items initially
-//     displayFilteredItems(itemsObject);
-  
-
-
 // // TEST FOLLOWING CODE LATER
-// function ready() {
-//   // Get the add, remove, and count elements
-//   const addButton = document.querySelector('.addMore');
-//   const removeButton = document.querySelector('.remove');
-//   const countElement = document.querySelector('.count');
 
-//   // Set the initial count value
-//   let count = 1;
-//   countElement.textContent = count;
+const addToCart = document.querySelectorAll(".addToCart");
 
-//   // Increase count on add button click
-//   addButton.addEventListener('click', function() {
-//     count++;
-//     countElement.textContent = count;
-//   });
+  addToCart.forEach((button) => {
+    button.addEventListener("click", () => {
+      const itemPic = button.dataset.itemPic;
+      const itemName = button.dataset.itemName;
+      const itemPrice = button.dataset.itemPrice;
+  
+      addToCartFunction(itemPic, itemName, itemPrice);
+    });
+  });
+  
+  function addToCartFunction(itemPic, itemName, itemPrice) {
+    // Lógica para adicionar os itens ao carrinho de compras
+    console.log("Item adicionado ao carrinho:", itemPic, itemName, itemPrice);
+  }
 
-//   // Decrease count on remove button click
-//   removeButton.addEventListener('click', function() {
-//     if (count > 1) {
-//       count--;
-//       countElement.textContent = count;
-//     }
-//   });
+function ready() {
+  // Get the add, remove, and count elements
+  const addButton = document.querySelector('.addMore');
+  const removeButton = document.querySelector('.remove');
+  const countElement = document.querySelector('.count');
 
-//   // Get the product price element
-//   const productPriceElement = document.querySelector('.productPrice');
+  // Set the initial count value
+  let count = 1;
+  countElement.textContent = count;
 
-//   // Set the initial product price
-//   const initialProductPrice = 10.99;
-//   productPriceElement.textContent = '€' + initialProductPrice.toFixed(2);
+  // Increase count on add button click
+  addButton.addEventListener('click', function() {
+    count++;
+    countElement.textContent = count;
+  });
 
-//   // Get the total price element
-//   const totalPriceElement = document.querySelector('.totalPrice');
+  // Decrease count on remove button click
+  removeButton.addEventListener('click', function() {
+    if (count > 1) {
+      count--;
+      countElement.textContent = count;
+    }
+  });
 
-//   // Calculate and update the total price
-//   function updateTotalPrice() {
-//     const totalPrice = count * initialProductPrice;
-//     totalPriceElement.textContent = '€' + totalPrice.toFixed(2);
-//   }
+  // Get the product price element
+  const productPriceElement = document.querySelector('.priceValue');
 
-//   // Update the total price when count changes
-//   countElement.addEventListener('input', updateTotalPrice);
+  // Set the initial product price
+  const initialpriceValue = 10.99;
+  priceValueElement.textContent = '€' + initialpriceValue.toFixed(2);
 
-//   // Get the checkout button
-//   const checkoutButton = document.querySelector('.checkoutButton');
+  // Get the total price element
+  const totalPriceElement = document.querySelector('.totalPrice');
 
-//   // Handle checkout button click
-//   checkoutButton.addEventListener('click', function() {
-//     alert('Thank you for your purchase!');
-//   });
-// }
+  // Calculate and update the total price
+  function updateTotalPrice() {
+    const totalPrice = count * initialpriceValue;
+    totalPriceElement.textContent = '€' + totalPrice.toFixed(2);
+  }
+
+  // Update the total price when count changes
+  countElement.addEventListener('input', updateTotalPrice);
+
+  // Get the checkout button
+  const checkoutButton = document.querySelector('.checkoutButton');
+
+  // Handle checkout button click
+  checkoutButton.addEventListener('click', function() {
+    alert('Thank you for your purchase!');
+  });
+}
