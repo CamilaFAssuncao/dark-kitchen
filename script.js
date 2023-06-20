@@ -68,6 +68,13 @@ const itemsObject = [
       addToCart : ["Add to cart"]
     },
 
+    {
+    itemPic: "edamame.png",
+    itemName: "Edamame",
+    itemTags: ["side","vegan", "vegetarian", "dairy-free","gluten-free"],
+    itemDescription: "immature green soybeans",
+    itemPrice: "4,6",  },
+
    {
     itemPic: "salmonpoke.png",
     itemName: "Salmon Poke ",
