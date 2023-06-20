@@ -18,8 +18,9 @@ body {
 
 #cartIcon {
     color: #9ead9b;
-    margin-top: 100px;
-    margin-right: 40px;
+    margin-left: 30px;
+    /* margin-top: 100px;
+    margin-right: 40px; */
 }
 
 .card {
@@ -38,6 +39,13 @@ body {
     overflow: scroll;
     font-family: 'Montserrat', sans-serif;
     text-align: justify;
+}
+
+.switchcart {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 20px;
+
 }
 
 .cardCollection {
@@ -98,10 +106,10 @@ header {
     width: 220px;
 }
 
-#cartIcon {
+/* #cartIcon {
     margin-top: 60px;
     margin-right: 40px;
-}
+} */
 }
 
 /* //////// Switch logo style //////////*/
