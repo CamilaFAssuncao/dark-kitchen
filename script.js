@@ -233,15 +233,20 @@ checkbox.addEventListener("change", () => {
 //Inside the callback function, document.body.classList.toggle("light") toggles the "light" class on the body element. The classList property provides access to the class attributes of an element. The toggle() method adds the "light" class to the body element if it is not present, and removes it if it is already present. This way, each time the checkbox is checked or unchecked, the "light" class is added or removed from the body element, effectively toggling the light mode.
 
 document.addEventListener("DOMContentLoaded", function() {
-  const shoppingCartIcon = document.getElementById("cartIcon");
-  const shoppingCartPopup = document.getElementById("cartPopUp");
-
-  shoppingCartIcon.addEventListener("click", function() {
-    if (shoppingCartPopup) {
-      shoppingCartPopup.style.display = "block";
-    }
+    const shoppingCartIcon = document.getElementById("cartIcon");
+    const shoppingCartPopup = document.getElementById("cartPopUp");
+  
+    shoppingCartIcon.addEventListener("click", function() {
+      if (shoppingCartPopup) {
+        if (shoppingCartPopup.style.display === "none") {
+          shoppingCartPopup.style.display = "block";
+        } else {
+          shoppingCartPopup.style.display = "none";
+        }
+      }
+    });
   });
-});
+  
 
 
 
@@ -278,6 +283,8 @@ document.addEventListener("DOMContentLoaded", function() {
 //     // Display all items initially
 //     displayFilteredItems(itemsObject);
   
+
+
 // // TEST FOLLOWING CODE LATER
 // function ready() {
 //   // Get the add, remove, and count elements

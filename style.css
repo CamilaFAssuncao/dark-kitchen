@@ -1,5 +1,7 @@
 .darklogo, .lightlogo {
-    width: 300px;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
 }
 
 .productImg {
@@ -10,6 +12,8 @@
 body {
     background-color: #3a563e;
     color: #f7eae6;
+    margin: 0px;
+    padding: 0px;
 }
 
 .dishesObject {
@@ -71,20 +75,26 @@ body {
 header {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .logoimage {
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-end;
+    flex: 1;
+    align-items: center;
 }
 
 .lemonlogo {
-    width: 150px;
+    max-width: 120px;
     height: fit-content;
-    margin-top: 30px;
-    margin-left: 30px;
+    /* margin-top: 60px; */
+    margin-left: 20px;
 }
 
 .namelogo {
@@ -92,9 +102,16 @@ header {
 }
 
 #cartPopUp {
-    display: none;
     background-color: #f7eae6;
     color: #3a563e;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    margin-top: 100px;
+    margin-right: 2%;
+    padding: 20px;
+    opacity: 0.8;
 }
 
 .wrapper {
@@ -103,6 +120,7 @@ header {
     flex-wrap: wrap;
     margin-bottom: 10px;
     flex-direction: column;
+    padding-left: 2%;
     
 }
 
@@ -137,7 +155,9 @@ header {
     background-color: #d2b3b7;
 }
 
-@media screen and (max-width: 768px) {
+
+/* may not necessary anymore */
+/* @media screen and (max-width: 768px) {
     .lemonlogo {
         width: 110px;
         margin-left: 20px;
@@ -146,7 +166,7 @@ header {
     .namelogo {
         width: 220px;
     }
-}
+} */
 
 /* Switch logo style */
 body .lightlogo {
