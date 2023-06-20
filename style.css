@@ -12,7 +12,7 @@ body {
     background-color: #E1D7DB;
 }
 
-i {
+#cartIcon {
     color: #f7eae6;
     margin-top: 100px;
     margin-right: 40px;
@@ -81,7 +81,7 @@ header {
     width: 220px;
 }
 
-i {
+#cartIcon {
     margin-top: 60px;
     margin-right: 40px;
 }

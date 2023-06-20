@@ -139,6 +139,7 @@ const itemsObject = [
 }
   ];
   
+  
   const dishesContainer = document.querySelector(".cardCollection");
   
   const displayCollection = (
@@ -181,8 +182,12 @@ const itemsObject = [
     dishesContainer.appendChild(card);
   };
   
-  const generateItemsObject = () => {
-    itemsObject.forEach((dishes) => {
+
+
+  const generateItemsObject = (items) => {
+    dishesContainer.innerHTML = ''; // Clear the existing items
+  
+    items.forEach((dishes) => {
       displayCollection(
         dishes.itemPic,
         dishes.itemName,
@@ -194,7 +199,59 @@ const itemsObject = [
     });
   };
   
-  generateItemsObject();
+  const displayFilteredItems = (items) => {
+    generateItemsObject(items);
+  };
+  
+  generateItemsObject(itemsObject);
+  
+  const searchInput = document.getElementById("search-input");
+  const searchButton = document.getElementById("search");
+  
+  searchButton.addEventListener("click", () => {
+    const searchTerm = searchInput.value.toLowerCase();
+    const filteredItems = itemsObject.filter((item) =>
+      item.itemName.toLowerCase().includes(searchTerm)
+    );
+  
+    displayFilteredItems(filteredItems);
+  });
+  
+//   const generateItemsObject = () => {
+//     itemsObject.forEach((dishes) => {
+//       displayCollection(
+//         dishes.itemPic,
+//         dishes.itemName,
+//         dishes.itemTags,
+//         dishes.itemDescription,
+//         dishes.itemPrice,
+//         dishes.addToCart
+//       );
+//     });
+
+
+
+
+//   };
+  
+//   generateItemsObject();
+
+//     const searchInput = document.getElementById("search-input");
+//     const searchButton = document.getElementById("search");
+  
+//     searchButton.addEventListener("click", () => {
+//       const searchTerm = searchInput.value.toLowerCase();
+//       const filteredItems = itemsObject.filter((item) =>
+//         item.itemName.toLowerCase().includes(searchTerm)
+//       );
+  
+//       displayFilteredItems(filteredItems);
+//     });
+  
+//     // Display all items initially
+//     displayFilteredItems(itemsObject);
+  
+  
   
 
 ////////// Darkmodeswitch //////////////

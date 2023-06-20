@@ -19,8 +19,7 @@
     </div>
         <i class="fa fa-shopping-cart" style="font-size:36px" id="cartIcon"></i>
 
-        <!-- darkmodeswitch -->
-<h1>Switch Me</h1>   <!-- The <h1> element displays the heading "Switch Me Button" on the page -->
+        
     <div>
       <!-- The <div> element serves as a container for the checkbox and its label. -->
       <input type="checkbox" class="checkbox" id="checkbox">
@@ -37,22 +36,34 @@
       </label>
     </div>
     </header>
-    <div class="aboutUs">
-        <div class="aboutUsPic">
-            <!-- <img src="" alt="Picture about us"> -->
-        </div>
-        <div class="aboutUsParagraph">
-            <p class="aboutUsPara"></p>
-        </div>
+ <!-- <div class="searchBar">
+    <input type="text" id="search-input" placeholder="Search...">
+<button id="search">Filter</button>
+
+ </div> -->
+
+ <div class="wrapper">
+    <div id="search-container">
+      <input type="search" id="search-input" placeholder="Search Item">
+      <button id="search">Search</button>
     </div>
-    <div class="tags"></div>
+    <div id="buttons">
+      <button class="button-value" onclick="filterProduct('All')">All</button>
+      <button class="button-value" onclick="filterProduct('Juice')">Juice</button>
+      <button class="button-value" onclick="filterProduct('Starter')">Starter</button>
+      <button class="button-value" onclick="filterProduct('Main Course')">Main Course</button>
+      <button class="button-value" onclick="filterProduct('Side')">Side</button>
+      <button class="button-value" onclick="filterProduct('Dessert')">Dessert</button>
+    </div>
+    <div id="products"></div>
+  </div>
     <div class="cardCollection">
     </div>
         
 <!-- SHOPPING CART -->
 
     
-66<div class="shoppingCartContainer" id="cartPopUp">
+<div class="shoppingCartContainer" id="cartPopUp">
 <h2 class="cartTitle">Shopping list</h2>
     <div class="counter">
     <div class="addMore">+</div>
