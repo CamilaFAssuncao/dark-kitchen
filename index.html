@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -11,13 +12,30 @@
 <body>
     <header>
         <div class="logoimage">
-        <img src="logo.png" alt="logo" class="namelogo">
+            <img src="logo.png" alt="logo" class="darklogo">
+            <img src="lightlogo.png" alt="light coloured logo" class="lightlogo">
         <!-- <img src="lightlogo.png" alt="light coloured logo" class="lightlogo"> -->
         <img src="lemonlogo.png" alt="lemon logo" class="lemonlogo">
     </div>
         <i class="fa fa-shopping-cart" style="font-size:36px" id="cartIcon"></i>
 
         <!-- darkmodeswitch -->
+<h1>Switch Me</h1>   <!-- The <h1> element displays the heading "Switch Me Button" on the page -->
+    <div>
+      <!-- The <div> element serves as a container for the checkbox and its label. -->
+      <input type="checkbox" class="checkbox" id="checkbox">
+      <!-- Checkbox label: The <input> element with type="checkbox" represents the checkbox input. It has the class attribute set to "checkbox" and the id attribute set to "checkbox". The class is used for styling, and the id is used to select the checkbox element in JavaScript. -->
+      <label for="checkbox" class="checkbox-label">
+        <!-- Moon icon : The <label> element is associated with the checkbox using the for attribute, which has the value matching the id of the checkbox. This creates a connection between the label and the checkbox, allowing users to click on the label to interact with the checkbox. -->
+        <i class="fas fa-sun"></i>
+        <!-- Sun icon -->
+        <i class="fas fa-moon"></i>
+        <!-- Ball element -->
+        <!-- Inside the label, there are two <i> elements. These elements are typically used to display icons from a font icon library like Font Awesome. In this case, they are used to represent the moon and sun icons, respectively. -->
+        <span class="ball"></span>
+        <!-- Finally, there is a <span> element with the class attribute set to "ball". This element is used to represent a ball or switch button. Its appearance and position will be controlled through CSS. -->
+      </label>
+    </div>
     </header>
     <div class="aboutUs">
         <div class="aboutUsPic">

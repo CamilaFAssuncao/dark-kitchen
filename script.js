@@ -196,6 +196,21 @@ const itemsObject = [
   
   generateItemsObject();
   
+
+////////// Darkmodeswitch //////////////
+
+  const checkbox = document.getElementById("checkbox");
+  //The const checkbox = document.getElementById("checkbox"); line selects the checkbox element from the HTML document by its id attribute. It assigns the element to the checkbox constant, allowing us to refer to it later in the code.
+
+  checkbox.addEventListener("change", () => {
+    document.body.classList.toggle("light")
+  });
+  //The checkbox.addEventListener("change", () => { ... }); line adds an event listener to the checkbox element. It listens for the "change" event, which occurs when the checkbox is checked or unchecked. When the event is triggered, the provided callback function is executed.
+  
+  //The arrow function () => { ... } is the callback function that runs when the checkbox's "change" event occurs.
+  
+  //Inside the callback function, document.body.classList.toggle("light") toggles the "light" class on the body element. The classList property provides access to the class attributes of an element. The toggle() method adds the "light" class to the body element if it is not present, and removes it if it is already present. This way, each time the checkbox is checked or unchecked, the "light" class is added or removed from the body element, effectively toggling the light mode.
+
   document.addEventListener("DOMContentLoaded", function() {
     const shoppingCartIcon = document.getElementById("cartIcon");
     const shoppingCartPopup = document.getElementById("cartPopUp");
@@ -277,7 +292,3 @@ const itemsObject = [
 //     alert('Thank you for your purchase!');
 //   });
 // }
-
-
-  
-  
