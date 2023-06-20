@@ -68,15 +68,6 @@ const itemsObject = [
       addToCart : ["Add to cart"]
     },
 
-    {
-    itemPic: "edamame.png",
-    itemName: "Edamame",
-    itemTags: ["side","vegan", "dairy-free","gluten-free"],
-    itemDescription: ["Nutritious and flavorful young soybean pods, lightly seasoned with salt, perfect as an appetizer or snack."],
-    itemPrice: ["€4"],
-    addToCart : ["Add to cart"]
-},
-
    {
     itemPic: "salmonpoke.png",
     itemName: "Salmon Poke ",
@@ -112,6 +103,16 @@ const itemsObject = [
     itemPrice: ["€12"],
     addToCart : ["Add to cart"]
   },
+
+  {
+    itemPic: "edamame.png",
+    itemName: "Edamame",
+    itemTags: ["side","vegan", "dairy-free","gluten-free"],
+    itemDescription: ["Nutritious and flavorful young soybean pods, lightly seasoned with salt, perfect as an appetizer or snack."],
+    itemPrice: ["€4"],
+    addToCart : ["Add to cart"]
+},
+
 
   {
     itemPic: "musubi.png",
