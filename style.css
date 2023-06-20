@@ -65,3 +65,35 @@ header {
     margin-top: 30px;
     margin-left: 30px;
 }
+
+.lightlogo {
+    display: none;
+}
+
+/* .light-mode .logo {
+    content: url('lightlogo.png');
+  }
+  
+  .dark-mode .logo {
+    content: url('logo.png');
+  } */
+  
+
+  
+
+@media screen and (max-width: 768px) {
+.lemonlogo {
+    width: 110px;
+    margin-left: 20px;
+}
+
+.logo {
+    width: 220px;
+}
+
+i {
+    margin-top: 60px;
+    margin-right: 40px;
+}
+
+}

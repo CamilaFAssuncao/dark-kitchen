@@ -189,6 +189,15 @@ const itemsObject = [
   
   generateItemsObject();
   
+  const cartIcon = document.getElementById("cartIcon");
+  const cartPopup = document.getElementById("cartPopup");
+  
+  cartIcon.addEventListener("click", function() {
+    // Exibir a pop-up do carrinho de compras
+    cartPopup.style.display = "block";
+  });
+  
+
 // const buttons = document.querySelectorAll(".priceButton");
 
 // document.querySelectorAll(".priceButton").addEventListener("click")
