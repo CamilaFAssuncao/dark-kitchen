@@ -1,10 +1,5 @@
 img {
-    width: 200px;
-}
-
-.dishes {
-    border: solid black;
-
+    width: 300px;
 }
 
 body {
@@ -13,10 +8,80 @@ body {
 }
 
 .dishesObject {
-    background-color: #E1D7DB
-    ;
+    background-color: #E1D7DB;
 }
 
 i {
     color: #f7eae6;
+    margin-top: 100px;
+    margin-right: 40px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid 4px #f7eae6;
+    border-radius: 25px;
+    margin-right: 10px;
+    padding: 2%;
+    background-color: white;
+    color: black;
+    width: 250px;
+    margin-bottom: 20px;
+    overflow: scroll;
+}
+
+.cardCollection {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.logoimage {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.lemonlogo {
+    width: 150px;
+    height: fit-content;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.namelogo {
+    width: 300px;
+}
+
+  #cartPopUp {
+    display: none;
+    background-color:#f7eae6;
+    color: #3a563e;
+  }
+
+@media screen and (max-width: 768px) {
+.lemonlogo {
+    width: 110px;
+    margin-left: 20px;
+}
+
+.namelogo {
+    width: 220px;
+}
+
+i {
+    margin-top: 60px;
+    margin-right: 40px;
+}
 }
