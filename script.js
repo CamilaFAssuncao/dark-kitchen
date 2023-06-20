@@ -38,7 +38,7 @@ const itemsObject = [
     {
       itemPic: "mushroom.png",
       itemName: "Shimeji and Shitake",
-      itemTags: ["starter","vegan", "vegetarian", "dairyfree", "gluten-free"],
+      itemTags: ["starter","vegan", "dairyfree", "gluten-free"],
       itemDescription: ["Stir-fry mushrooms in olive oil with saké and soy sauce."],
       itemPrice: ["€6"],
       addToCart : ["Add to cart"]
@@ -46,7 +46,7 @@ const itemsObject = [
     {
       itemPic: "sunomono.png",
       itemName: "Sunomono",
-      itemTags: ["starter", "vegan", "vegetarian", "dairyfree", "gluten-free"],
+      itemTags: ["starter", "vegan", "dairyfree", "gluten-free"],
       itemDescription: ["Cumcuber salad marinated in rice vinegar."],
       itemPrice: ["€4"],
       addToCart : ["Add to cart"]
@@ -54,7 +54,7 @@ const itemsObject = [
     {
       itemPic: "sweetpotato.png",
       itemName: "Sweet potato chips",
-      itemTags: ["starter","vegan", "vegetarian", "dairyfree", "gluten-free"],
+      itemTags: ["starter","vegan", "dairyfree", "gluten-free"],
       itemDescription: ["Baked sweet potato chips."],
       itemPrice: ["€4"],
       addToCart : ["Add to cart"]
@@ -71,7 +71,7 @@ const itemsObject = [
     {
     itemPic: "edamame.png",
     itemName: "Edamame",
-    itemTags: ["side","vegan", "vegetarian", "dairy-free","gluten-free"],
+    itemTags: ["side","vegan", "dairy-free","gluten-free"],
     itemDescription: "immature green soybeans",
     itemPrice: ["€4"],
     addToCart : ["Add to cart"]
@@ -107,7 +107,7 @@ const itemsObject = [
   {
     itemPic: "veggiechickenpoke.png",
     itemName: "Veggie Chicken Poke ",
-    itemTags: ["main course", "vegan", "vegetarian", "gluten-free"],
+    itemTags: ["main course", "vegetarian", "gluten-free"],
     itemDescription: ["Vinegared rice base, veggie chicken, avocado, mango, edamame, cucumber, cashew nuts, thai cebette and sesame."],
     itemPrice: ["€12"],
     addToCart : ["Add to cart"]

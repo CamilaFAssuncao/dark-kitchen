@@ -17,7 +17,7 @@ body {
 }
 
 #cartIcon {
-    color: #f7eae6;
+    color: #9ead9b;
     margin-top: 100px;
     margin-right: 40px;
 }
@@ -32,10 +32,11 @@ body {
     margin-right: 10px;
     padding: 2%;
     background-color: white;
-    color: black;
+    color: #2f5c33;
     width: 250px;
     margin-bottom: 20px;
     overflow: scroll;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .cardCollection {
@@ -43,6 +44,17 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
+}
+
+.addToCart {
+    border-radius: 25px;
+    border: none;
+    padding: 20px 40px 20px 40px;
+    margin-top: 10px;
+    background-color:#ffde3d;
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 header {
