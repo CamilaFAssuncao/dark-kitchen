@@ -9,6 +9,7 @@ img {
 
 body {
     background-color: #3a563e;
+    /* background-color: red; */
     color: #f7eae6;
 }
 
@@ -20,3 +21,66 @@ body {
 i {
     color: #f7eae6;
 }
+
+/* //////// Switch logo style //////////*/
+body .lightlogo {
+    display: none;
+}
+
+body.light .lightlogo {
+    display: block;
+}
+
+body.light .darklogo {
+    display: none;
+}
+/* //////// Switch logo style //////////*/
+
+
+/* //////// Switch mode button and background Styling //////////*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap"); /* imports the Montserrat font from Google Fonts, making it available for use in the document */
+
+* {box-sizing: border-box;} /* The * {box-sizing: border-box;} line sets the box-sizing property to border-box for all elements, which ensures that padding and border are included in the element's total width and height. */
+
+
+body.light {background-color: #efe3de;} /* #9b59b6 */ /* The body.light selector targets the body element when it has the class "light" applied. It changes the background color to a lighter shade. */
+
+body.light h1, body.light .support a {color: #3a563e;} /* The body.light h1, body.light .support a selector targets the h1 element and the anchor elements within an element with the class "support" when the body has the "light" class. It changes their color to white. */
+
+.checkbox { /* The .checkbox selector targets elements with the class "checkbox", which in this case is the checkbox input element. It sets the opacity to 0, making it invisible. */
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox-label { /* The .checkbox-label selector targets elements with the class "checkbox-label", which is the label associated with the checkbox. It sets various styles such as the background color, width, height, border-radius, padding, cursor, and flex properties. */
+  background-color: #3a563e;
+  width: 50px;
+  height: 26px;
+  border-radius: 50px;
+  position: relative;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fa-moon {color: #f7eae6;} /* The .fa-moon and .fa-sun selectors target elements with the classes "fa-moon" and "fa-sun", respectively. These classes are */
+
+.fa-sun {color: #3a563e;} 
+
+.checkbox-label .ball { /* The .checkbox:checked + .checkbox-label .ball selector targets the .ball element that is a descendant of the .checkbox-label element immediately preceded by a checked .checkbox element. It applies the following styles when the checkbox is checked: */
+  background-color: #f7eae6;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .checkbox-label .ball { /* transform: translateX(24px); moves the ball element horizontally by 24 pixels to the right, creating an effect of sliding the ball within the toggle switch. */
+  transform: translateX(24px);
+}
+/* //////// Switch mode button and background Styling  //////////*/
