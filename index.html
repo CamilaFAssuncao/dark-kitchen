@@ -3,73 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="about.css">
-    <title>Dark Kitchen</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Lemon - Healthy Food</title>
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="logo">
+        <div class="logoimage">
+            <img src="logo.png" alt="logo" class="darklogo">
+            <img src="lightlogo.png" alt="light coloured logo" class="lightlogo">
+       
+        <img src="lemonlogo.png" alt="lemon logo" class="lemonlogo">
+    </div>
+        <i class="fa fa-shopping-cart" style="font-size:36px" id="cartIcon"></i>
 
-
-
-        <i class="fas fa-shopping-cart"></i>
         <!-- darkmodeswitch -->
+<h1>Switch Me</h1>   
+    <div>
+      
+      <input type="checkbox" class="checkbox" id="checkbox">
+  
+      <label for="checkbox" class="checkbox-label">
+       
+        <i class="fas fa-sun"></i>
+        <!-- Sun icon -->
+        <i class="fas fa-moon"></i>
+        
+        <span class="ball"></span>
+        
+      </label>
+    </div>
     </header>
-
     <div class="wrapper">
         <div id="search-container">
             <input type="search" id="search-input" placeholder="Search Item ">
             <button id="search"> Search </button>
         </div>
         <div id="buttons">
-            
-            <button class="button-value"onclick="filterProduct('All')">All </button>
-            <button class="button-value"onclick="filterProduct('Juice')">Juice </button>
-            <button class="button-value"onclick="filterProduct('Starter')"> Starter </button>
-            <button class="button-value"onclick="filterProduct('Main Course')">Main Course </button>
-            <button class="button-value"onclick="filterProduct('Side')">Side </button>
-            <button class="button-value"onclick="filterProduct('Dessert')"> Dessert </button>
-           
+            <button class="btn" onclick="filterObjects('All')" >All </button>
+            <button class="btn" onclick="filterObjects('juice')">Juice</button>
+            <button class="btn" onclick="filterObjects('main course ')">Main Course</button>
+            <button class="btn" onclick="filterObjects('slide')">Side</button>
+            <button class="btn" onclick="filterObjects('dessert')">Dessert</button>
+            <button class="btn" onclick="filterObjects('vegan')">Vegan</button>
+
           </div>
-          </div>
-        </div>
-    </div>
     
-
-    </div>
-    <!-- <div class="aboutUs">
-        <div class="aboutUsPic">
-            <img src="aboutlemon.png" alt="Picture about us">
-        </div>
-        <div class="aboutext">
-         <div class="titleAbout">
-      <h1>Where health meets happiness </h1>
-       
-        </div> 
-     
-            <div class="aboutUsParagraph">
-            <p class="aboutUsPara">At Lemon, our story begins with a simple yet powerful vision: We aim to bring happiness to people's lives through affordable, high-quality, and healthy food. The name "Lemon" serves as a reminder of the vibrant freshness we infuse into every dish we create. We strongly believe that good nutrition should be accessible to all, without compromising on taste or breaking the bank. That's why we have meticulously crafted our menu, sourcing the finest ingredients to create flavorful dishes that nourish both body and soul. With our unwavering commitment to excellence, we strive to provide an inclusive dining experience where we invite everyone to indulge in the joy of wholesome cuisine and embrace a healthier lifestyle.</p> </div>
-        </div>
-    </div>
-            
-     -->
-    <hr>
-   
     <div class="cardCollection">
-        <!-- <div class="dishesObject"> 
-            <div class="itemPic">
-                <img src="# alt="" srcset="">
-            </div>
-            <h2 class="itemName">Salmon poke</h2>
-            <div class="itemTags"></div>
-            <div class="itemDescription">salmon, mango, rice, bla bla bla</div>
-            <div class="itemPrice">12 euro</div>
-
-
-
-        </div> -->
     </div>
+        
+<!-- SHOPPING CART -->
+
+    
+66
+<div class="shoppingCartContainer" id="cartPopUp">
+<h2 class="cartTitle">Shopping list</h2>
+    <div class="counter">
+    <div class="addMore">+</div>
+   	<div class="count">1</div>
+   	<div class="remove">-</div>
+</div>
+    <div class="productPrice"></div>
+    <hr>
+    <div class="totalPrice"></div>
+    <button class="checkoutButton"></button>
+    
+</div> 
+
    <script src="script.js"></script> 
 </body>
 </html>
