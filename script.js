@@ -173,6 +173,7 @@ const displayCollection = (item) => {
 
   const image = document.createElement("img");
   image.src = item.itemPic;
+  image.classList.add("productImg");
   card.appendChild(image);
 
   const name = document.createElement("h2");
