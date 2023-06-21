@@ -1,18 +1,27 @@
 img {
-    width: 300px;
+    width: 200px;
+}
+
+.dishes {
+    border: solid black;
+
 }
 
 body {
     background-color: #3a563e;
     /* background-color: red; */
     color: #f7eae6;
+    margin: 0px;
+    padding: 0px;
 }
 
 .dishesObject {
-    background-color: #E1D7DB;
+    background-color: #E1D7DB
+    ;
 }
 
-i {
+
+.fa-sun {
     color: #f7eae6;
     margin-top: 100px;
     margin-right: 40px;
@@ -209,4 +218,19 @@ body.light h1, body.light .support a {color: #3a563e;} /* The body.light h1, bod
 
 .checkbox:checked + .checkbox-label .ball { /* transform: translateX(24px); moves the ball element horizontally by 24 pixels to the right, creating an effect of sliding the ball within the toggle switch. */
   transform: translateX(24px);
+}
+
+.checkbox-label .ball {
+    background-color: #f7eae6;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .checkbox-label .ball {
+    transform: translateX(24px);
 }
