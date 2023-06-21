@@ -232,6 +232,7 @@ body.light .support a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 3px;
 }
 
 .fa-moon {
