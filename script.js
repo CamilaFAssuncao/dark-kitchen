@@ -1,4 +1,5 @@
 const itemsObject = [
+
   {
     itemPic: "berry.png",
     itemName: "Berry & Bright",
@@ -66,7 +67,7 @@ const itemsObject = [
     itemName: "Sweet potato chips",
     itemTags: "Starter",
     itemDescription: ["Baked sweet potato chips."],
-    itemPrice: ["Add for €4"],
+    itemPrice: ["€4"],
     addToCart: ["Add to cart"],
   },
   {
@@ -84,7 +85,7 @@ const itemsObject = [
     itemPic: "edamame.jpg",
     itemName: "Edamame",
     itemTags: "Side",
-    itemDescription: ["immature green soybeans"],
+    itemDescription: ["Nutritious and flavorful young soybean pods, lightly seasoned with salt, perfect as an appetizer or snack."],
     itemPrice: "4,6",
   },
   {
@@ -102,30 +103,34 @@ const itemsObject = [
     itemName: "Salmon Poke",
     itemTags: "Main course",
     itemDescription: [
-      "Choice of base, fresh salmon, mango or pineapple, radish, cucumber, red cabbage, avocado, edamame, sesame seeds. Served with the sauce of your choice.",
+      "Vinegared rice base, fresh salmon, mango or pineapple, radish, cucumber, red cabbage, avocado, edamame, sesame seeds. Served with Teriyaki sauce",
     ],
     itemPrice: ["€13"],
     addToCart: ["Add to cart"],
+
   },
   {
     itemPic: "tunapoke.png",
     itemName: "Tuna Poke",
+
     itemTags: "Main course",
     itemDescription: [
-      "Choice of marinated tuna, mango or pineapple, radish, cucumber, red cabbage, avocado, edamame, sesame seeds. Served with the sauce of your choice.",
+      "Vinegared rice base, marinated tuna, mango or pineapple, radish, cucumber, red cabbage, avocado, edamame, sesame seeds. Served with Ponzu dressing.",
     ],
     itemPrice: ["€13"],
     addToCart: ["Add to cart"],
   },
   {
     itemPic: "falafelpoke.png",
+
     itemName: "Falafel Poke",
     itemTags: "Main course",
     itemDescription: [
-      "Choice of base, falafels depending, grenade, radish, carrot, avocado, edamame, cucumber, red cabbage, sesame seeds and raspberry. Served with the sauce of your choice",
+     "Vinegared rice base, falafels, grenade , radish, carrot, avocado, edamame, cucumber, red cabbage, sesame seeds and raspberry. Served with Wasabi mayo.",
     ],
     itemPrice: ["€11"],
     addToCart: ["Add to cart"],
+
   },
   {
     itemPic: "veggiechickenpoke.png",
@@ -158,6 +163,8 @@ const itemsObject = [
     addToCart: ["Add to cart"],
   },
 ];
+
+
 const dishesContainer = document.querySelector(".cardCollection");
 
 const displayCollection = (item) => {
@@ -248,3 +255,78 @@ cards.forEach((card) => {
   const tags = card.querySelector("p").textContent.split(",");
   tags.forEach((tag) => card.classList.add(tag.trim().toLowerCase()));
 });
+
+const checkbox = document.getElementById("checkbox");
+checkbox.addEventListener("change", () => {
+  document.body.classList.toggle("light");
+});
+
+const shoppingCartIcon = document.getElementById("cartIcon");
+const shoppingCartPopup = document.getElementById("cartPopUp");
+
+shoppingCartIcon.addEventListener("click", function() {
+  if (shoppingCartPopup) {
+    if (shoppingCartPopup.style.display === "none") {
+      shoppingCartPopup.style.display = "block";
+    } else {
+      shoppingCartPopup.style.display = "none";
+    }
+  }
+});
+
+/* const addToCart = document.querySelectorAll(".addToCart");
+
+addToCart.forEach((button) => {
+  button.addEventListener("click", () => {
+    const itemPic = button.dataset.itemPic;
+    const itemName = button.dataset.itemName;
+    const itemPrice = button.dataset.itemPrice;
+
+    addToCartFunction(itemPic, itemName, itemPrice);
+  });
+});
+
+function addToCartFunction(itemPic, itemName, itemPrice) {
+  console.log("Item adicionado ao carrinho:", itemPic, itemName, itemPrice);
+}
+
+function ready() {
+  const addButton = document.querySelector('.addMore');
+  const removeButton = document.querySelector('.remove');
+  const countElement = document.querySelector('.count');
+  let count = 1;
+  countElement.textContent = count;
+
+  addButton.addEventListener('click', function() {
+    count++;
+    countElement.textContent = count;
+  });
+
+  removeButton.addEventListener('click', function() {
+    if (count > 1) {
+      count--;
+      countElement.textContent = count;
+    }
+  });
+
+  const productPriceElement = document.querySelector('.priceValue');
+  const initialpriceValue = 10.99;
+  priceValueElement.textContent = '€' + initialpriceValue.toFixed(2);
+
+  const totalPriceElement = document.querySelector('.totalPrice');
+
+  function updateTotalPrice() {
+    const totalPrice = count * initialpriceValue;
+    totalPriceElement.textContent = '€' + totalPrice.toFixed(2);
+  }
+
+  countElement.addEventListener('input', updateTotalPrice);
+
+  const checkoutButton = document.querySelector('.checkoutButton');
+
+  checkoutButton.addEventListener('click', function() {
+    alert('Thank you for your purchase!');
+  });
+}
+
+ready(); */

@@ -1,1 +1,262 @@
 
+.darklogo, .lightlogo {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
+.productImg {
+    width: 220px;
+    height: 240px;
+}
+
+body {
+    background-color: #3a563e;
+    color: #f7eae6;
+    margin: 0px;
+    padding: 0px;
+}
+
+.dishesObject {
+    background-color: #E1D7DB;
+}
+
+#cartIcon {
+    color: #9ead9b;
+    margin-left: 30px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid 4px #f7eae6;
+    border-radius: 25px;
+    margin-right: 10px;
+    padding: 2%;
+    background-color: white;
+    color: #2f5c33;
+    width: 300px;
+    margin-bottom: 30px;
+    overflow: scroll;
+    font-family: 'Montserrat', sans-serif;
+    text-align: justify;
+}
+
+.card:hover {
+    transform: scale(1.06);
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.switchcart {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 20px;
+}
+
+.cardCollection {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.addToCart {
+    border-radius: 25px;
+    border: none;
+    padding: 20px 40px 20px 40px;
+    margin-top: 10px;
+    background-color: #ffde3d;
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.logoimage {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    flex: 1;
+    align-items: center;
+}
+
+.lemonlogo {
+    max-width: 120px;
+    height: fit-content;
+    /* margin-top: 60px; */
+    margin-left: 20px;
+}
+
+.namelogo {
+    width: 300px;
+}
+
+
+  #cartPopUp {
+    display: none;
+    background-color:#9ead9b;
+    color: #3a563e;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+    margin-top: 100px;
+    margin-right: 2%;
+    padding: 20px;
+    opacity: 0.8;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    flex-direction: column;
+    margin: 2%;
+    align-items: flex-start;
+    
+}
+
+
+#search-container {
+    margin-left: 12px;
+}
+
+#buttons {
+    margin-left: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+.button-value, #search, #search-input {
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: none;
+    
+}
+
+#search {
+    color: #d2b3b7;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.button-value {
+    background-color: transparent;
+    color:  #013220;
+    font-size: 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.button-value:hover {
+    background-color: #d2b3b7;
+}
+
+.counter, button {
+    border: none;
+    border-radius: 100px;
+    display: flex;
+}
+
+/* may not necessary anymore */
+/* @media screen and (max-width: 768px) {
+    .lemonlogo {
+        width: 110px;
+        margin-left: 20px;
+    }
+
+    .namelogo {
+        width: 220px;
+    }
+} */
+
+
+/* Switch logo style */
+body .lightlogo {
+    display: none;
+}
+
+body.light .lightlogo {
+    display: block;
+}
+
+body.light .darklogo {
+    display: none;
+}
+
+/* Switch mode button and background Styling */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body.light {
+    background-color: #efe3de;
+}
+
+body.light h1,
+body.light .support a {
+    color: #3a563e;
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.checkbox-label {
+    background-color: #3a563e;
+    width: 50px;
+    height: 26px;
+    border-radius: 50px;
+    position: relative;
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fa-moon {
+    color: #f7eae6;
+}
+
+
+.fa-sun {
+    color: #f7eae6;
+}
+
+.checkbox-label .ball {
+    background-color: #f7eae6;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .checkbox-label .ball {
+    transform: translateX(24px);
+}
+
