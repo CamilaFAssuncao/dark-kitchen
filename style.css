@@ -102,8 +102,10 @@ header {
     width: 300px;
 }
 
-#cartPopUp {
-    background-color: #9ead9b;;
+
+  #cartPopUp {
+    display: none;
+    background-color:#9ead9b;
     color: #3a563e;
     position: absolute;
     top: 0;
@@ -125,6 +127,7 @@ header {
     align-items: flex-start;
     
 }
+
 
 #search-container {
     margin-left: 12px;
@@ -184,6 +187,7 @@ header {
     }
 } */
 
+
 /* Switch logo style */
 body .lightlogo {
     display: none;
@@ -234,6 +238,7 @@ body.light .support a {
 .fa-moon {
     color: #f7eae6;
 }
+
 
 .fa-sun {
     color: #f7eae6;
