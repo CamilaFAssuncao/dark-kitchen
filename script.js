@@ -2,7 +2,7 @@ const itemsObject = [
   {
     itemPic: "berry.png",
     itemName: "Berry & Bright",
-    itemTags: ["Juice, Vegan, Organic, Gluten-free"],
+    itemTags: "Juice",
     itemDescription: [
       "Delicious berries and wholesome ingredients such as carrots and blueberries to brighten up your day: Tart cherry, Carrot, Blackberry, Pomegranate, Blueberry, Cranberry, Açaí",
     ],
@@ -13,7 +13,7 @@ const itemsObject = [
   {
     itemPic: "green.png",
     itemName: "Clean & Green",
-    itemTags: ["Juice, Vegan, Organic, Gluten-free"],
+    itemTags: "Juice",
     itemDescription: [
       "A refreshing boost in a bottle with those daily vitamins and minerals you need for a great day : Kale, Cucumber, Apple, Spinach, Mint, Celery, Lime, Parsley",
     ],
@@ -24,7 +24,7 @@ const itemsObject = [
   {
     itemPic: "red.png",
     itemName: "Restoration Red",
-    itemTags: ["Juice, Vegan, Organic, Gluten-free"],
+    itemTags: "Juice",
     itemDescription: [
       "A combination of red fruits to bring you flavor and sustenance : Tomato, Tart cherry, Beet, Strawberry, Apple, Lime",
     ],
@@ -35,7 +35,7 @@ const itemsObject = [
   {
     itemPic: "tropical.png",
     itemName: "Tropical Glow",
-    itemTags: ["Juice, Vegan, Organic, Gluten-free"],
+    itemTags: "Juice",
     itemDescription: [
       "A blend of tropical fruit with revitalizing coconut water : Pineapple, Orange, Banana, Apple, Mango, Passionfruit, Coconut water",
     ],
@@ -46,7 +46,7 @@ const itemsObject = [
   {
     itemPic: "mushroom.png",
     itemName: "Shimeji and Shitake",
-    itemTags: ["starter", "vegan", "vegetarian", "dairyfree", "gluten-free"],
+    itemTags: "Starter",
     itemDescription: [
       "Stir-fry mushrooms in olive oil with saké and soy sauce.",
     ],
@@ -56,7 +56,7 @@ const itemsObject = [
   {
     itemPic: "sunomono.png",
     itemName: "Sunomono",
-    itemTags: ["starter", "vegan", "vegetarian", "dairyfree", "gluten-free"],
+    itemTags: "Starter",
     itemDescription: ["Cumcuber salad marinated in rice vinegar."],
     itemPrice: ["€4"],
     addToCart: ["Add to cart"],
@@ -64,7 +64,7 @@ const itemsObject = [
   {
     itemPic: "sweetpotato.png",
     itemName: "Sweet potato chips",
-    itemTags: ["starter", "vegan", "vegetarian", "dairyfree", "gluten-free"],
+    itemTags: "Starter",
     itemDescription: ["Baked sweet potato chips."],
     itemPrice: ["Add for €4"],
     addToCart: ["Add to cart"],
@@ -72,7 +72,7 @@ const itemsObject = [
   {
     itemPic: "shrimp.png",
     itemName: "Honey Garlic and Pineapple Shrimp Skewers",
-    itemTags: ["starter", "dairyfree", "gluten-free"],
+    itemTags: "Starter",
     itemDescription: [
       "Succulent shrimp and juicy pineapple chunks grilled, coated in a sweet and savory honey garlic glaze",
     ],
@@ -83,17 +83,17 @@ const itemsObject = [
   {
     itemPic: "edamame.jpg",
     itemName: "Edamame",
-    itemTags: ["side", "vegan", "vegetarian", "dairy-free", "gluten-free"],
-    itemDescription: "immature green soybeans",
+    itemTags: "Side",
+    itemDescription: ["immature green soybeans"],
     itemPrice: "4,6",
   },
 
   {
     itemPic: "salmonpoke.png",
-    itemName: "Salmon Poke ",
-    itemTags: ["main course", "fish"],
+    itemName: "Salmon Poke",
+    itemTags: "Main course",
     itemDescription: [
-      "Choice of base, fresh salmon, mango or pineapple, radish, cucumber, red cabbage, avocado, edamame, sesame seeds.Served with the sauce of your choice.",
+      "Choice of base, fresh salmon, mango or pineapple, radish, cucumber, red cabbage, avocado, edamame, sesame seeds. Served with the sauce of your choice.",
     ],
     itemPrice: ["€13"],
     addToCart: ["Add to cart"],
@@ -102,9 +102,9 @@ const itemsObject = [
   {
     itemPic: "tunapoke.png",
     itemName: "Tuna Poke",
-    itemTags: ["main course", "fish"],
+    itemTags: "Main course",
     itemDescription: [
-      "Choice of marinated tuna, mango or pineapple, radish, cucumber, red cabbage, avocado, edamame, sesame seeds.Served with the sauce of your choice.",
+      "Choice of marinated tuna, mango or pineapple, radish, cucumber, red cabbage, avocado, edamame, sesame seeds. Served with the sauce of your choice.",
     ],
     itemPrice: ["€13"],
     addToCart: ["Add to cart"],
@@ -112,10 +112,10 @@ const itemsObject = [
 
   {
     itemPic: "falafelpoke.png",
-    itemName: "Falafel Poke ",
-    itemTags: ["main course", "vegetarian", "gluten-free"],
+    itemName: "Falafel Poke",
+    itemTags: "Main course",
     itemDescription: [
-      "Choice of base, falafels depending , grenade , radish, carrot, avocado, edamame, cucumber, red cabbage, sesame seeds and raspberry.Served with the sauce of your choice",
+      "Choice of base, falafels depending, grenade, radish, carrot, avocado, edamame, cucumber, red cabbage, sesame seeds and raspberry. Served with the sauce of your choice",
     ],
     itemPrice: ["€11"],
     addToCart: ["Add to cart"],
@@ -123,8 +123,8 @@ const itemsObject = [
 
   {
     itemPic: "veggiechickenpoke.png",
-    itemName: "Veggie Chicken Poke ",
-    itemTags: ["main course", "vegan", "vegetarian", "gluten-free"],
+    itemName: "Veggie Chicken Poke",
+    itemTags: "Main course",
     itemDescription: [
       "Vinegared rice base, veggie chicken, avocado, mango, edamame, cucumber, cashew nuts, thai cebette and sesame.",
     ],
@@ -135,7 +135,7 @@ const itemsObject = [
   {
     itemPic: "musubi.png",
     itemName: "Spam Musubi with Egg",
-    itemTags: ["side dish", "dairyfree", "gluten-free"],
+    itemTags: "Side",
     itemDescription: [
       "Spam Musubi with Egg is a delicious Hawaiian dish consisting of grilled Spam, a slice of omelette, and sticky rice, wrapped in a sheet of nori seaweed.",
     ],
@@ -146,7 +146,7 @@ const itemsObject = [
   {
     itemPic: "marble.png",
     itemName: "Moist Marble Cake",
-    itemTags: ["Dessert, Vegetarian"],
+    itemTags: "Dessert",
     itemDescription: [
       "Fall for our super marble cake: Flour, Milk, Butter, Eggs, Sugar, and Chocolate",
     ],
@@ -157,7 +157,7 @@ const itemsObject = [
   {
     itemPic: "fruits.png",
     itemName: "Fruit Ninja",
-    itemTags: ["Dessert", "Vegan"],
+    itemTags: "Dessert, Vegan",
     itemDescription: [
       "Our exotic fruit salad brings a touch of freshness with its chunks of fresh mango, pomegranate and pineapple",
     ],
@@ -165,43 +165,35 @@ const itemsObject = [
     addToCart: ["Add to cart"],
   },
 ];
-
 const dishesContainer = document.querySelector(".cardCollection");
 
-const displayCollection = (
-  itemPic,
-  itemName,
-  itemTags,
-  itemDescription,
-  itemPrice,
-  addToCart
-) => {
+const displayCollection = (item) => {
   const card = document.createElement("div");
   card.classList.add("card");
 
   const image = document.createElement("img");
-  image.src = itemPic;
+  image.src = item.itemPic;
   card.appendChild(image);
 
   const name = document.createElement("h2");
-  name.textContent = itemName;
+  name.textContent = item.itemName;
   card.appendChild(name);
 
   const tags = document.createElement("p");
-  tags.textContent = itemTags;
+  tags.textContent = item.itemTags;
   card.appendChild(tags);
 
   const description = document.createElement("p");
-  description.textContent = itemDescription;
+  description.textContent = item.itemDescription[0];
   card.appendChild(description);
 
   const price = document.createElement("div");
-  price.textContent = itemPrice;
+  price.textContent = item.itemPrice;
   price.classList.add("priceValue");
   card.appendChild(price);
 
   const addButton = document.createElement("button");
-  addButton.textContent = addToCart;
+  addButton.textContent = item.addToCart;
   addButton.classList.add("addToCart");
   card.appendChild(addButton);
 
@@ -209,68 +201,44 @@ const displayCollection = (
 };
 
 const generateItemsObject = () => {
-  itemsObject.forEach((dishes) => {
-    displayCollection(
-      dishes.itemPic,
-      dishes.itemName,
-      dishes.itemTags,
-      dishes.itemDescription,
-      dishes.itemPrice,
-      dishes.addToCart
-    );
+  itemsObject.forEach((item) => {
+    displayCollection(item);
   });
 };
 
 generateItemsObject();
 
-////////// Darkmodeswitch //////////////
+function filterObjects(category) {
+  const cards = document.querySelectorAll(".card");
 
-const checkbox = document.getElementById("checkbox");
-//The const checkbox = document.getElementById("checkbox"); line selects the checkbox element from the HTML document by its id attribute. It assigns the element to the checkbox constant, allowing us to refer to it later in the code.
-
-checkbox.addEventListener("change", () => {
-  document.body.classList.toggle("light");
-});
-//The checkbox.addEventListener("change", () => { ... }); line adds an event listener to the checkbox element. It listens for the "change" event, which occurs when the checkbox is checked or unchecked. When the event is triggered, the provided callback function is executed.
-
-//The arrow function () => { ... } is the callback function that runs when the checkbox's "change" event occurs.
-
-//Inside the callback function, document.body.classList.toggle("light") toggles the "light" class on the body element. The classList property provides access to the class attributes of an element. The toggle() method adds the "light" class to the body element if it is not present, and removes it if it is already present. This way, each time the checkbox is checked or unchecked, the "light" class is added or removed from the body element, effectively toggling the light mode.
-
-document.addEventListener("DOMContentLoaded", function () {
-  const shoppingCartIcon = document.getElementById("cartIcon");
-  const shoppingCartPopup = document.getElementById("cartPopUp");
-
-  shoppingCartIcon.addEventListener("click", function () {
-    if (shoppingCartPopup) {
-      shoppingCartPopup.style.display = "block";
+  cards.forEach((card) => {
+    if (
+      category.toLowerCase() === "all" ||
+      card.classList.contains(category.toLowerCase())
+    ) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
     }
   });
-});
-function filterObjects(c) {
-  let x, i;
-  x = document.getElementsByClassName("card");
-  if (c == "All") c = "";
-  for (i = 0; i < x.length; i++) {
-    removeClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) addClass(x[(i, "show")]);
-  }
 }
+
 function addClass(element, name) {
   let i, arr1, arr2;
   arr1 = element.className.split(" ");
   arr2 = name.split(" ");
   for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {
+    if (arr1.indexOf(arr2[i]) === -1) {
       element.className += " " + arr2[i];
     }
   }
 }
+
 function removeClass(element, name) {
   let i, arr1, arr2;
   arr1 = element.className.split(" ");
-  arr2 = name.spliy(" ");
-  for (i = 0; i < arr2.le000ngth; i++) {
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
     while (arr1.indexOf(arr2[i]) > -1) {
       arr1.splice(arr1.indexOf(arr2[i]), 1);
     }
@@ -278,24 +246,9 @@ function removeClass(element, name) {
   element.className = arr1.join(" ");
 }
 
-// const searchButton = document.getElementById("search");
-// const searchInput = document.getElementById("search-input");
+const cards = document.querySelectorAll(".card");
 
-// searchButton.addEventListener("click", () => {
-//   const searchQuery = searchInput.value.toLowerCase();
-//   filterProduct(searchQuery);
-// });
-// const filterProduct = (category) => {
-//   const cards = document.querySelectorAll(".card");
-//   cards.forEach((card) => {
-//     if (category === "All") {
-//       card.style.display = "block";
-//     } else if (card.classList.contains(category.toUpperCase())) {
-//       card.style.display = "block";
-//     } else {
-//       card.style.display = "none";
-//     }
-//   });
-// };
-
-// filterProduct();
+cards.forEach((card) => {
+  const tags = card.querySelector("p").textContent.split(",");
+  tags.forEach((tag) => card.classList.add(tag.trim().toLowerCase()));
+});
