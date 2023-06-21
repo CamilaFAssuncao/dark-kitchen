@@ -256,91 +256,93 @@ checkbox.addEventListener("change", () => {
 
 //Inside the callback function, document.body.classList.toggle("light") toggles the "light" class on the body element. The classList property provides access to the class attributes of an element. The toggle() method adds the "light" class to the body element if it is not present, and removes it if it is already present. This way, each time the checkbox is checked or unchecked, the "light" class is added or removed from the body element, effectively toggling the light mode.
 
-//displaying shopping cart
 
-document.addEventListener("DOMContentLoaded", function() {
-    const shoppingCartIcon = document.getElementById("cartIcon");
-    const shoppingCartPopup = document.getElementById("cartPopUp");
+
+//displaying shopping cart - NOT WORKING
+
+// document.addEventListener("DOMContentLoaded", function() {
+//     const shoppingCartIcon = document.getElementById("cartIcon");
+//     const shoppingCartPopup = document.getElementById("cartPopUp");
   
-    shoppingCartIcon.addEventListener("click", function() {
-      if (shoppingCartPopup) {
-        if (shoppingCartPopup.style.display === "none") {
-          shoppingCartPopup.style.display = "block";
-        } else {
-          shoppingCartPopup.style.display = "none";
-        }
-      }
-    });
-  });
+//     shoppingCartIcon.addEventListener("click", function() {
+//       if (shoppingCartPopup) {
+//         if (shoppingCartPopup.style.display === "none") {
+//           shoppingCartPopup.style.display = "block";
+//         } else {
+//           shoppingCartPopup.style.display = "none";
+//         }
+//       }
+//     });
+//   });
   
 
-// // TEST FOLLOWING CODE LATER
+// // // TEST FOLLOWING CODE LATER
 
-const addToCart = document.querySelectorAll(".addToCart");
+// const addToCart = document.querySelectorAll(".addToCart");
 
-  addToCart.forEach((button) => {
-    button.addEventListener("click", () => {
-      const itemPic = button.dataset.itemPic;
-      const itemName = button.dataset.itemName;
-      const itemPrice = button.dataset.itemPrice;
+//   addToCart.forEach((button) => {
+//     button.addEventListener("click", () => {
+//       const itemPic = button.dataset.itemPic;
+//       const itemName = button.dataset.itemName;
+//       const itemPrice = button.dataset.itemPrice;
   
-      addToCartFunction(itemPic, itemName, itemPrice);
-    });
-  });
+//       addToCartFunction(itemPic, itemName, itemPrice);
+//     });
+//   });
   
-  function addToCartFunction(itemPic, itemName, itemPrice) {
-    // Lógica para adicionar os itens ao carrinho de compras
-    console.log("Item adicionado ao carrinho:", itemPic, itemName, itemPrice);
-  }
+//   function addToCartFunction(itemPic, itemName, itemPrice) {
+//     // Lógica para adicionar os itens ao carrinho de compras
+//     console.log("Item adicionado ao carrinho:", itemPic, itemName, itemPrice);
+//   }
 
-function ready() {
-  // Get the add, remove, and count elements
-  const addButton = document.querySelector('.addMore');
-  const removeButton = document.querySelector('.remove');
-  const countElement = document.querySelector('.count');
+// function ready() {
+//   // Get the add, remove, and count elements
+//   const addButton = document.querySelector('.addMore');
+//   const removeButton = document.querySelector('.remove');
+//   const countElement = document.querySelector('.count');
 
-  // Set the initial count value
-  let count = 1;
-  countElement.textContent = count;
+//   // Set the initial count value
+//   let count = 1;
+//   countElement.textContent = count;
 
-  // Increase count on add button click
-  addButton.addEventListener('click', function() {
-    count++;
-    countElement.textContent = count;
-  });
+//   // Increase count on add button click
+//   addButton.addEventListener('click', function() {
+//     count++;
+//     countElement.textContent = count;
+//   });
 
-  // Decrease count on remove button click
-  removeButton.addEventListener('click', function() {
-    if (count > 1) {
-      count--;
-      countElement.textContent = count;
-    }
-  });
+//   // Decrease count on remove button click
+//   removeButton.addEventListener('click', function() {
+//     if (count > 1) {
+//       count--;
+//       countElement.textContent = count;
+//     }
+//   });
 
-  // Get the product price element
-  const productPriceElement = document.querySelector('.priceValue');
+//   // Get the product price element
+//   const productPriceElement = document.querySelector('.priceValue');
 
-  // Set the initial product price
-  const initialpriceValue = 10.99;
-  priceValueElement.textContent = '€' + initialpriceValue.toFixed(2);
+//   // Set the initial product price
+//   const initialpriceValue = 10.99;
+//   priceValueElement.textContent = '€' + initialpriceValue.toFixed(2);
 
-  // Get the total price element
-  const totalPriceElement = document.querySelector('.totalPrice');
+//   // Get the total price element
+//   const totalPriceElement = document.querySelector('.totalPrice');
 
-  // Calculate and update the total price
-  function updateTotalPrice() {
-    const totalPrice = count * initialpriceValue;
-    totalPriceElement.textContent = '€' + totalPrice.toFixed(2);
-  }
+//   // Calculate and update the total price
+//   function updateTotalPrice() {
+//     const totalPrice = count * initialpriceValue;
+//     totalPriceElement.textContent = '€' + totalPrice.toFixed(2);
+//   }
 
-  // Update the total price when count changes
-  countElement.addEventListener('input', updateTotalPrice);
+//   // Update the total price when count changes
+//   countElement.addEventListener('input', updateTotalPrice);
 
-  // Get the checkout button
-  const checkoutButton = document.querySelector('.checkoutButton');
+//   // Get the checkout button
+//   const checkoutButton = document.querySelector('.checkoutButton');
 
-  // Handle checkout button click
-  checkoutButton.addEventListener('click', function() {
-    alert('Thank you for your purchase!');
-  });
-}
+//   // Handle checkout button click
+//   checkoutButton.addEventListener('click', function() {
+//     alert('Thank you for your purchase!');
+//   });
+// }
