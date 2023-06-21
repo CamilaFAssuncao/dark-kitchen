@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+
     <title>Lemon - Healthy Food</title>
 </head>
 <body>
@@ -17,6 +18,7 @@
         <div class="logoimage">
             <img src="logo.png" alt="logo" class="darklogo">
             <img src="lightlogo.png" alt="light coloured logo" class="lightlogo">
+
         <!-- <img src="lightlogo.png" alt="light coloured logo" class="lightlogo"> -->
         <img src="lemonlogo.png" alt="lemon logo" class="lemonlogo">
     </div>
@@ -52,19 +54,20 @@
 
  <div class="wrapper">
     <div id="search-container">
-      <input type="search" id="search-input" placeholder="Filter Item">
+      <input type="search" id="search-input" placeholder="Search Item">
       <i class="fa-solid fa-magnifying-glass" id="search"></i>
     </div>
+   
     <div id="buttons">
-      <button class="button-value" onclick="filterProduct('All')">All</button>
-      <button class="button-value" onclick="filterProduct('Juice')">Juice</button>
-      <button class="button-value" onclick="filterProduct('Starter')">Starter</button>
-      <button class="button-value" onclick="filterProduct('Main Course')">Main Course</button>
-      <button class="button-value" onclick="filterProduct('Side')">Side</button>
-      <button class="button-value" onclick="filterProduct('Dessert')">Dessert</button>
+      <button onclick="filterObjects('All')">All</button>
+            <button onclick="filterObjects('Juice')">Juice</button>
+            <button onclick="filterObjects('Starter')">Starter</button>
+            <button onclick="filterObjects('Main course')">Main course</button>
+            <button onclick="filterObjects('Side')">Side</button>
+            <button onclick="filterObjects('Dessert')">Dessert</button>
+
     </div>
-    <div id="products"></div>
-  </div>
+  
     <div class="cardCollection">
     </div>
         
@@ -74,6 +77,7 @@
 <div id="shoppingCart"></div>
 
 
+          
 <div class="shoppingCartContainer" id="cartPopUp">
 <h2 class="cartTitle">Shopping cart</h2>
     <div class="counter">
@@ -85,14 +89,16 @@
    	<div class="remove">
         <button class="removeButton">-</button>
     </div>
+
 </div>
     <div class="productPrice"></div>
     <hr>
     <div class="totalPrice"></div>
+
     <button class="checkoutButton">Process order</button>
+
     
 </div> 
 
    <script src="script.js"></script> 
 </body>
-</html>
