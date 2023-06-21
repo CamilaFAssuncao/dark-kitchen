@@ -1,5 +1,4 @@
 const itemsObject = [
-
   {
     itemPic: "berry.png",
     itemName: "Berry & Bright",
@@ -85,7 +84,9 @@ const itemsObject = [
     itemPic: "edamame.jpg",
     itemName: "Edamame",
     itemTags: "Side",
-    itemDescription: ["Nutritious and flavorful young soybean pods, lightly seasoned with salt, perfect as an appetizer or snack."],
+    itemDescription: [
+      "Nutritious and flavorful young soybean pods, lightly seasoned with salt, perfect as an appetizer or snack.",
+    ],
     itemPrice: "4,6",
   },
   {
@@ -107,7 +108,6 @@ const itemsObject = [
     ],
     itemPrice: ["€13"],
     addToCart: ["Add to cart"],
-
   },
   {
     itemPic: "tunapoke.png",
@@ -126,11 +126,10 @@ const itemsObject = [
     itemName: "Falafel Poke",
     itemTags: "Main course",
     itemDescription: [
-     "Vinegared rice base, falafels, grenade , radish, carrot, avocado, edamame, cucumber, red cabbage, sesame seeds and raspberry. Served with Wasabi mayo.",
+      "Vinegared rice base, falafels, grenade , radish, carrot, avocado, edamame, cucumber, red cabbage, sesame seeds and raspberry. Served with Wasabi mayo.",
     ],
     itemPrice: ["€11"],
     addToCart: ["Add to cart"],
-
   },
   {
     itemPic: "veggiechickenpoke.png",
@@ -163,7 +162,6 @@ const itemsObject = [
     addToCart: ["Add to cart"],
   },
 ];
-
 
 const dishesContainer = document.querySelector(".cardCollection");
 
@@ -267,31 +265,21 @@ checkbox.addEventListener("change", () => {
 
 //Inside the callback function, document.body.classList.toggle("light") toggles the "light" class on the body element. The classList property provides access to the class attributes of an element. The toggle() method adds the "light" class to the body element if it is not present, and removes it if it is already present. This way, each time the checkbox is checked or unchecked, the "light" class is added or removed from the body element, effectively toggling the light mode.
 
-
-
 //open shopping cart popup - start
 
-document.addEventListener("DOMContentLoaded", ()=> {
-    const shoppingCartIcon = document.getElementById("cartIcon");
-    const shoppingCartPopup = document.getElementById("cartPopUp");
-  
-    shoppingCartIcon.addEventListener("click", ()=> {
-      if (shoppingCartPopup) {
-        if (shoppingCartPopup.style.display === "none") {
-          shoppingCartPopup.style.display = "block";
-        } else {
-          shoppingCartPopup.style.display = "none";
-        }
+document.addEventListener("DOMContentLoaded", () => {
+  const shoppingCartIcon = document.getElementById("cartIcon");
+  const shoppingCartPopup = document.getElementById("cartPopUp");
+
+  shoppingCartIcon.addEventListener("click", () => {
+    if (shoppingCartPopup) {
+      if (shoppingCartPopup.style.display === "none") {
+        shoppingCartPopup.style.display = "block";
+      } else {
+        shoppingCartPopup.style.display = "none";
       }
-    });
+    }
   });
-  
-//open shopping cart popup - end  
+});
 
-// const addToCart = card.querySelector(".addToCart");
-// const priceButton = card.querySelector(".priceValue");
-
-// addToCart.addEventListener("click", () => addToCart(dishes));
-
-// return card;
-
+// rough merging
