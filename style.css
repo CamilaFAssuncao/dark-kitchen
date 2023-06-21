@@ -95,7 +95,6 @@ header {
 .lemonlogo {
     max-width: 120px;
     height: fit-content;
-    /* margin-top: 60px; */
     margin-left: 20px;
 }
 
@@ -234,6 +233,7 @@ body.light .support a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 3px;
 }
 
 .fa-moon {

@@ -260,73 +260,37 @@ const checkbox = document.getElementById("checkbox");
 checkbox.addEventListener("change", () => {
   document.body.classList.toggle("light");
 });
+//The checkbox.addEventListener("change", () => { ... }); line adds an event listener to the checkbox element. It listens for the "change" event, which occurs when the checkbox is checked or unchecked. When the event is triggered, the provided callback function is executed.
 
-const shoppingCartIcon = document.getElementById("cartIcon");
-const shoppingCartPopup = document.getElementById("cartPopUp");
+//The arrow function () => { ... } is the callback function that runs when the checkbox's "change" event occurs.
 
-shoppingCartIcon.addEventListener("click", function() {
-  if (shoppingCartPopup) {
-    if (shoppingCartPopup.style.display === "none") {
-      shoppingCartPopup.style.display = "block";
-    } else {
-      shoppingCartPopup.style.display = "none";
-    }
-  }
-});
+//Inside the callback function, document.body.classList.toggle("light") toggles the "light" class on the body element. The classList property provides access to the class attributes of an element. The toggle() method adds the "light" class to the body element if it is not present, and removes it if it is already present. This way, each time the checkbox is checked or unchecked, the "light" class is added or removed from the body element, effectively toggling the light mode.
 
-/* const addToCart = document.querySelectorAll(".addToCart");
 
-addToCart.forEach((button) => {
-  button.addEventListener("click", () => {
-    const itemPic = button.dataset.itemPic;
-    const itemName = button.dataset.itemName;
-    const itemPrice = button.dataset.itemPrice;
 
-    addToCartFunction(itemPic, itemName, itemPrice);
+//open shopping cart popup - start
+
+document.addEventListener("DOMContentLoaded", ()=> {
+    const shoppingCartIcon = document.getElementById("cartIcon");
+    const shoppingCartPopup = document.getElementById("cartPopUp");
+  
+    shoppingCartIcon.addEventListener("click", ()=> {
+      if (shoppingCartPopup) {
+        if (shoppingCartPopup.style.display === "none") {
+          shoppingCartPopup.style.display = "block";
+        } else {
+          shoppingCartPopup.style.display = "none";
+        }
+      }
+    });
   });
-});
+  
+//open shopping cart popup - end  
 
-function addToCartFunction(itemPic, itemName, itemPrice) {
-  console.log("Item adicionado ao carrinho:", itemPic, itemName, itemPrice);
-}
+// const addToCart = card.querySelector(".addToCart");
+// const priceButton = card.querySelector(".priceValue");
 
-function ready() {
-  const addButton = document.querySelector('.addMore');
-  const removeButton = document.querySelector('.remove');
-  const countElement = document.querySelector('.count');
-  let count = 1;
-  countElement.textContent = count;
+// addToCart.addEventListener("click", () => addToCart(dishes));
 
-  addButton.addEventListener('click', function() {
-    count++;
-    countElement.textContent = count;
-  });
+// return card;
 
-  removeButton.addEventListener('click', function() {
-    if (count > 1) {
-      count--;
-      countElement.textContent = count;
-    }
-  });
-
-  const productPriceElement = document.querySelector('.priceValue');
-  const initialpriceValue = 10.99;
-  priceValueElement.textContent = '€' + initialpriceValue.toFixed(2);
-
-  const totalPriceElement = document.querySelector('.totalPrice');
-
-  function updateTotalPrice() {
-    const totalPrice = count * initialpriceValue;
-    totalPriceElement.textContent = '€' + totalPrice.toFixed(2);
-  }
-
-  countElement.addEventListener('input', updateTotalPrice);
-
-  const checkoutButton = document.querySelector('.checkoutButton');
-
-  checkoutButton.addEventListener('click', function() {
-    alert('Thank you for your purchase!');
-  });
-}
-
-ready(); */
