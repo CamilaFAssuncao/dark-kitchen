@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
     <title>Lemon - Healthy Food</title>
 </head>
 <body>
@@ -17,9 +20,18 @@
         <!-- <img src="lightlogo.png" alt="light coloured logo" class="lightlogo"> -->
         <img src="lemonlogo.png" alt="lemon logo" class="lemonlogo">
     </div>
+
+
+    <div class="switchcart">
+        <i class="fa fa-shopping-cart" style="font-size:36px" id="cartIcon"></i>
+
+        
+    <div id="switchButton">
+      
         <i class="fa fa-shopping-cart cartColor" style="font-size:36px" id="cartIcon"></i>
         <!-- darkmodeswitch -->
     <div>
+
       <!-- The <div> element serves as a container for the checkbox and its label. -->
       <input type="checkbox" class="checkbox" id="checkbox">
       <!-- Checkbox label: The <input> element with type="checkbox" represents the checkbox input. It has the class attribute set to "checkbox" and the id attribute set to "checkbox". The class is used for styling, and the id is used to select the checkbox element in JavaScript. -->
@@ -35,33 +47,49 @@
         <!-- Finally, there is a <span> element with the class attribute set to "ball". This element is used to represent a ball or switch button. Its appearance and position will be controlled through CSS. -->
       </label>
     </div>
+</div>
     </header>
-    <div class="aboutUs">
-        <div class="aboutUsPic">
-            <!-- <img src="" alt="Picture about us"> -->
-        </div>
-        <div class="aboutUsParagraph">
-            <p class="aboutUsPara"></p>
-        </div>
+
+ <div class="wrapper">
+    <div id="search-container">
+      <input type="search" id="search-input" placeholder="Filter Item">
+      <i class="fa-solid fa-magnifying-glass" id="search"></i>
     </div>
-    <div class="tags"></div>
+    <div id="buttons">
+      <button class="button-value" onclick="filterProduct('All')">All</button>
+      <button class="button-value" onclick="filterProduct('Juice')">Juice</button>
+      <button class="button-value" onclick="filterProduct('Starter')">Starter</button>
+      <button class="button-value" onclick="filterProduct('Main Course')">Main Course</button>
+      <button class="button-value" onclick="filterProduct('Side')">Side</button>
+      <button class="button-value" onclick="filterProduct('Dessert')">Dessert</button>
+    </div>
+    <div id="products"></div>
+  </div>
     <div class="cardCollection">
     </div>
         
 <!-- SHOPPING CART -->
 
     
-66<div class="shoppingCartContainer" id="cartPopUp">
-<h2 class="cartTitle">Shopping list</h2>
+<div id="shoppingCart"></div>
+
+
+<div class="shoppingCartContainer" id="cartPopUp">
+<h2 class="cartTitle">Shopping cart</h2>
     <div class="counter">
-    <div class="addMore">+</div>
+    <div class="addMore">
+        <button class="addButton">+</button>
+
+    </div>
    	<div class="count">1</div>
-   	<div class="remove">-</div>
+   	<div class="remove">
+        <button class="removeButton">-</button>
+    </div>
 </div>
     <div class="productPrice"></div>
     <hr>
     <div class="totalPrice"></div>
-    <button class="checkoutButton"></button>
+    <button class="checkoutButton">Process order</button>
     
 </div> 
 

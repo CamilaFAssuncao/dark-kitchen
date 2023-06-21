@@ -1,22 +1,29 @@
-img {
-    width: 300px;
+.darklogo, .lightlogo {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
+.productImg {
+    width: 220px;
+    height: 240px;
 }
 
 body {
     background-color: #3a563e;
-    /* background-color: red; */
     color: #f7eae6;
+    margin: 0px;
+    padding: 0px;
 }
 
 .dishesObject {
     background-color: #E1D7DB;
 }
 
-/* i {
-    color: #f7eae6;
-    margin-top: 100px;
-    margin-right: 40px;
-} */
+#cartIcon {
+    color: #9ead9b;
+    margin-left: 30px;
+}
 
 .card {
     display: flex;
@@ -28,10 +35,23 @@ body {
     margin-right: 10px;
     padding: 2%;
     background-color: white;
-    color: black;
-    width: 250px;
-    margin-bottom: 20px;
+    color: #2f5c33;
+    width: 300px;
+    margin-bottom: 30px;
     overflow: scroll;
+    font-family: 'Montserrat', sans-serif;
+    text-align: justify;
+}
+
+.card:hover {
+    transform: scale(1.06);
+    transition: all 0.5s ease-in-out 0s;
+}
+
+.switchcart {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 20px;
 }
 
 .cardCollection {
@@ -41,58 +61,134 @@ body {
     justify-content: space-around;
 }
 
+.addToCart {
+    border-radius: 25px;
+    border: none;
+    padding: 20px 40px 20px 40px;
+    margin-top: 10px;
+    background-color: #ffde3d;
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
 header {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
-
+    align-items: flex-start;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .logoimage {
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-end;
+    flex: 1;
+    align-items: center;
 }
 
 .lemonlogo {
-    width: 150px;
+    max-width: 120px;
     height: fit-content;
-    margin-top: 30px;
-    margin-left: 30px;
+    /* margin-top: 60px; */
+    margin-left: 20px;
 }
 
 .namelogo {
     width: 300px;
 }
 
-.cartColor{
-  color: #fcd21d;
-}
 
   #cartPopUp {
     display: none;
-    background-color:#f7eae6;
+    background-color:#9ead9b;
     color: #3a563e;
-  }
-
-@media screen and (max-width: 768px) {
-.lemonlogo {
-    width: 110px;
-    margin-left: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+    margin-top: 100px;
+    margin-right: 2%;
+    padding: 20px;
+    opacity: 0.8;
 }
 
-.namelogo {
-    width: 220px;
+.wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+    flex-direction: column;
+    margin: 2%;
+    align-items: flex-start;
+    
 }
 
-/* i {
-    margin-top: 60px;
-    margin-right: 40px;
+
+#search-container {
+    margin-left: 12px;
+}
+
+#buttons {
+    margin-left: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+.button-value, #search, #search-input {
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: none;
+    
+}
+
+#search {
+    color: #d2b3b7;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.button-value {
+    background-color: transparent;
+    color:  #013220;
+    font-size: 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.button-value:hover {
+    background-color: #d2b3b7;
+}
+
+.counter, button {
+    border: none;
+    border-radius: 100px;
+    display: flex;
+}
+
+/* may not necessary anymore */
+/* @media screen and (max-width: 768px) {
+    .lemonlogo {
+        width: 110px;
+        margin-left: 20px;
+    }
+
+    .namelogo {
+        width: 220px;
+    }
 } */
-}
 
 
-/* //////// Switch logo style //////////*/
+/* Switch logo style */
 body .lightlogo {
     display: none;
 }
@@ -104,52 +200,61 @@ body.light .lightlogo {
 body.light .darklogo {
     display: none;
 }
-/* //////// Switch logo style //////////*/
 
+/* Switch mode button and background Styling */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
-/* //////// Switch mode button and background Styling //////////*/
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap"); /* imports the Montserrat font from Google Fonts, making it available for use in the document */
-
-* {box-sizing: border-box;} /* The * {box-sizing: border-box;} line sets the box-sizing property to border-box for all elements, which ensures that padding and border are included in the element's total width and height. */
-
-
-body.light {background-color: #efe3de;} /* #9b59b6 */ /* The body.light selector targets the body element when it has the class "light" applied. It changes the background color to a lighter shade. */
-
-body.light h1, body.light .support a {color: #3a563e;} /* The body.light h1, body.light .support a selector targets the h1 element and the anchor elements within an element with the class "support" when the body has the "light" class. It changes their color to white. */
-
-.checkbox { /* The .checkbox selector targets elements with the class "checkbox", which in this case is the checkbox input element. It sets the opacity to 0, making it invisible. */
-  opacity: 0;
-  position: absolute;
+* {
+    box-sizing: border-box;
 }
 
-.checkbox-label { /* The .checkbox-label selector targets elements with the class "checkbox-label", which is the label associated with the checkbox. It sets various styles such as the background color, width, height, border-radius, padding, cursor, and flex properties. */
-  background-color: #3a563e;
-  width: 50px;
-  height: 26px;
-  border-radius: 50px;
-  position: relative;
-  padding: 5px;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+body.light {
+    background-color: #efe3de;
 }
 
-.fa-moon {color: #f7eae6;} /* The .fa-moon and .fa-sun selectors target elements with the classes "fa-moon" and "fa-sun", respectively. These classes are */
-
-.fa-sun {color: #f7eae6;}
-
-.checkbox-label .ball { /* The .checkbox:checked + .checkbox-label .ball selector targets the .ball element that is a descendant of the .checkbox-label element immediately preceded by a checked .checkbox element. It applies the following styles when the checkbox is checked: */
-  background-color: #f7eae6;
-  width: 22px;
-  height: 22px;
-  position: absolute;
-  left: 2px;
-  top: 2px;
-  border-radius: 50%;
-  transition: transform 0.2s linear;
+body.light h1,
+body.light .support a {
+    color: #3a563e;
 }
 
-.checkbox:checked + .checkbox-label .ball { /* transform: translateX(24px); moves the ball element horizontally by 24 pixels to the right, creating an effect of sliding the ball within the toggle switch. */
-  transform: translateX(24px);
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.checkbox-label {
+    background-color: #3a563e;
+    width: 50px;
+    height: 26px;
+    border-radius: 50px;
+    position: relative;
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fa-moon {
+    color: #f7eae6;
+}
+
+
+.fa-sun {
+    color: #f7eae6;
+}
+
+.checkbox-label .ball {
+    background-color: #f7eae6;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .checkbox-label .ball {
+    transform: translateX(24px);
 }
