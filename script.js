@@ -87,51 +87,6 @@ const itemsObject = [
     itemDescription: ["immature green soybeans"],
     itemPrice: "4,6",
   },
-
-  {
-    itemPic: "salmonpoke.png",
-    itemName: "Salmon Poke",
-    itemTags: "Main course",
-    itemDescription: [
-      "Choice of base, fresh salmon, mango or pineapple, radish, cucumber, red cabbage, avocado, edamame, sesame seeds. Served with the sauce of your choice.",
-    ],
-    itemPrice: ["€13"],
-    addToCart: ["Add to cart"],
-  },
-
-  {
-    itemPic: "tunapoke.png",
-    itemName: "Tuna Poke",
-    itemTags: "Main course",
-    itemDescription: [
-      "Choice of marinated tuna, mango or pineapple, radish, cucumber, red cabbage, avocado, edamame, sesame seeds. Served with the sauce of your choice.",
-    ],
-    itemPrice: ["€13"],
-    addToCart: ["Add to cart"],
-  },
-
-  {
-    itemPic: "falafelpoke.png",
-    itemName: "Falafel Poke",
-    itemTags: "Main course",
-    itemDescription: [
-      "Choice of base, falafels depending, grenade, radish, carrot, avocado, edamame, cucumber, red cabbage, sesame seeds and raspberry. Served with the sauce of your choice",
-    ],
-    itemPrice: ["€11"],
-    addToCart: ["Add to cart"],
-  },
-
-  {
-    itemPic: "veggiechickenpoke.png",
-    itemName: "Veggie Chicken Poke",
-    itemTags: "Main course",
-    itemDescription: [
-      "Vinegared rice base, veggie chicken, avocado, mango, edamame, cucumber, cashew nuts, thai cebette and sesame.",
-    ],
-    itemPrice: ["€12"],
-    addToCart: ["Add to cart"],
-  },
-
   {
     itemPic: "musubi.png",
     itemName: "Spam Musubi with Egg",
@@ -142,7 +97,46 @@ const itemsObject = [
     itemPrice: ["€4"],
     addToCart: ["Add to cart"],
   },
-
+  {
+    itemPic: "salmonpoke.png",
+    itemName: "Salmon Poke",
+    itemTags: "Main course",
+    itemDescription: [
+      "Choice of base, fresh salmon, mango or pineapple, radish, cucumber, red cabbage, avocado, edamame, sesame seeds. Served with the sauce of your choice.",
+    ],
+    itemPrice: ["€13"],
+    addToCart: ["Add to cart"],
+  },
+  {
+    itemPic: "tunapoke.png",
+    itemName: "Tuna Poke",
+    itemTags: "Main course",
+    itemDescription: [
+      "Choice of marinated tuna, mango or pineapple, radish, cucumber, red cabbage, avocado, edamame, sesame seeds. Served with the sauce of your choice.",
+    ],
+    itemPrice: ["€13"],
+    addToCart: ["Add to cart"],
+  },
+  {
+    itemPic: "falafelpoke.png",
+    itemName: "Falafel Poke",
+    itemTags: "Main course",
+    itemDescription: [
+      "Choice of base, falafels depending, grenade, radish, carrot, avocado, edamame, cucumber, red cabbage, sesame seeds and raspberry. Served with the sauce of your choice",
+    ],
+    itemPrice: ["€11"],
+    addToCart: ["Add to cart"],
+  },
+  {
+    itemPic: "veggiechickenpoke.png",
+    itemName: "Veggie Chicken Poke",
+    itemTags: "Main course",
+    itemDescription: [
+      "Vinegared rice base, veggie chicken, avocado, mango, edamame, cucumber, cashew nuts, thai cebette and sesame.",
+    ],
+    itemPrice: ["€12"],
+    addToCart: ["Add to cart"],
+  },
   {
     itemPic: "marble.png",
     itemName: "Moist Marble Cake",
@@ -153,7 +147,6 @@ const itemsObject = [
     itemPrice: ["4€"],
     addToCart: ["Add to cart"],
   },
-
   {
     itemPic: "fruits.png",
     itemName: "Fruit Ninja",
@@ -212,9 +205,12 @@ function filterObjects(category) {
   const cards = document.querySelectorAll(".card");
 
   cards.forEach((card) => {
+    const tags = card.querySelector("p").textContent.split(",");
+    const cardCategories = tags.map((tag) => tag.trim().toLowerCase());
+
     if (
       category.toLowerCase() === "all" ||
-      card.classList.contains(category.toLowerCase())
+      cardCategories.includes(category.toLowerCase())
     ) {
       card.style.display = "block";
     } else {
