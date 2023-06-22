@@ -1,5 +1,4 @@
 const itemsObject = [
-
   {
     itemPic: "berry.png",
     itemName: "Berry & Bright",
@@ -108,7 +107,6 @@ const itemsObject = [
     ],
     itemPrice: ["€13"],
     addToCart: ["Add to cart"],
-
   },
   {
     itemPic: "tunapoke.png",
@@ -126,11 +124,10 @@ const itemsObject = [
     itemName: "Falafel Poke",
     itemTags: "Main course",
     itemDescription: [
-     "Vinegared rice base, falafels, grenade , radish, carrot, avocado, edamame, cucumber, red cabbage, sesame seeds and raspberry. Served with Wasabi mayo.",
+      "Vinegared rice base, falafels, grenade , radish, carrot, avocado, edamame, cucumber, red cabbage, sesame seeds and raspberry. Served with Wasabi mayo.",
     ],
     itemPrice: ["€11"],
     addToCart: ["Add to cart"],
-
   },
   {
     itemPic: "veggiechickenpoke.png",
@@ -316,6 +313,4 @@ cards.forEach((card) => {
   const tags = card.querySelector("p").textContent.split(",");
   tags.forEach((tag) => card.classList.add(tag.trim().toLowerCase()));
 });
-
-
 

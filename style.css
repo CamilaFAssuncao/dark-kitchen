@@ -1,4 +1,3 @@
-
 /* Logo and image styles */
 .darklogo,
 .lightlogo {
@@ -6,102 +5,105 @@
     max-width: 300px;
     height: auto;
 }
+* {
+  margin: 0;
+}
 
 /* Product image style */
 .productImg {
-    width: 220px;
-    height: 240px;
+  width: 220px;
+  height: 240px;
 }
 
 /* Body styles */
 body {
-    background-color: #3a563e;
-    color: #f7eae6;
-    margin: 0px;
-    padding: 0px;
+  background-color: #3a563e;
+  color: #f7eae6;
+  margin: 0px;
+  padding: 0px;
 }
 
 /* Dish object style */
 .dishesObject {
-    background-color: #E1D7DB;
+  background-color: #e1d7db;
 }
 
 /* Cart icon style */
 #cartIcon {
-    color: #9ead9b;
-    margin-left: 30px;
+  color: #9ead9b;
+  margin-left: 30px;
 }
 
 /* Card style */
 .card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: solid 4px #f7eae6;
-    border-radius: 25px;
-    margin-right: 10px;
-    padding: 2%;
-    background-color: white;
-    color: #2f5c33;
-    width: 300px;
-    margin-bottom: 30px;
-    overflow: scroll;
-    font-family: 'Montserrat', sans-serif;
-    text-align: justify;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: solid 4px #f7eae6;
+  border-radius: 25px;
+  margin-right: 10px;
+  padding: 2%;
+  background-color: white;
+  color: #2f5c33;
+  width: 300px;
+  margin-bottom: 30px;
+  overflow: scroll;
+  font-family: "Montserrat", sans-serif;
+  text-align: justify;
 }
 
 .card:hover {
-    transform: scale(1.06);
-    transition: all 0.5s ease-in-out 0s;
+  transform: scale(1.06);
+  transition: all 0.5s ease-in-out 0s;
 }
 
 /* Switch and cart section styles */
 .switchcart {
-    display: flex;
-    flex-direction: row-reverse;
-    margin: 20px;
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 20px;
 }
 
 /* Card collection style */
 .cardCollection {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 /* Add to cart button style */
 .addToCart {
-    border-radius: 25px;
-    border: none;
-    padding: 20px 40px 20px 40px;
-    margin-top: 10px;
-    background-color: #ffde3d;
-    font-size: 1em;
-    font-weight: bold;
-    text-transform: uppercase;
-    cursor: pointer;
+  border-radius: 25px;
+  border: none;
+  padding: 20px 40px 20px 40px;
+  margin-top: 10px;
+  background-color: #ffde3d;
+  font-size: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 /* Header style */
 header {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 10px;
-    box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 /* Logo image style */
 .logoimage {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-end;
-    flex: 1;
-    align-items: center;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  flex: 1;
+  align-items: center;
 }
 
 /* Lemon logo style */
@@ -113,8 +115,9 @@ header {
 
 /* Name logo style */
 .namelogo {
-    width: 300px;
+  width: 300px;
 }
+
 
 /* Shopping cart popup style */
 #cartPopUp {
@@ -142,8 +145,9 @@ header {
 }
 
 /* Search container style */
+
 #search-container {
-    margin-left: 12px;
+  margin-left: 12px;
 }
 
 /* Filter buttons style */
@@ -167,22 +171,22 @@ header {
 
 /* Search icon style */
 #search {
-    color: #d2b3b7;
-    cursor: pointer;
-    font-size: 22px;
-    font-weight: bold;
+  color: #d2b3b7;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: bold;
 }
 
 .filterbuttons {
-    background-color: transparent;
-    color:  #013220;
-    font-size: 16px;
-    cursor: pointer;
-    text-transform: uppercase;
+  background-color: transparent;
+  color: #013220;
+  font-size: 16px;
+  cursor: pointer;
+  text-transform: uppercase;
 }
 
 .filterbuttons:hover {
-    background-color: #d2b3b7;
+  background-color: #d2b3b7;
 }
 
 /* Counter and button styles */
@@ -195,72 +199,71 @@ button {
 
 /* Switch logo style */
 body .lightlogo {
-    display: none;
+  display: none;
 }
 
 body.light .lightlogo {
-    display: block;
+  display: block;
 }
 
 body.light .darklogo {
-    display: none;
+  display: none;
 }
 
 /* Switch mode button and background styling */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body.light {
-    background-color: #efe3de;
+  background-color: #efe3de;
 }
 
 body.light h1,
 body.light .support a {
-    color: #3a563e;
+  color: #3a563e;
 }
 
 .checkbox {
-    opacity: 0;
-    position: absolute;
+  opacity: 0;
+  position: absolute;
 }
 
 .checkbox-label {
-    background-color: #3a563e;
-    width: 50px;
-    height: 26px;
-    border-radius: 50px;
-    position: relative;
-    padding: 5px;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 3px;
+  background-color: #3a563e;
+  width: 50px;
+  height: 26px;
+  border-radius: 50px;
+  position: relative;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3px;
 }
 
 .fa-moon {
-    color: #f7eae6;
+  color: #f7eae6;
 }
 
 .fa-sun {
-    color: #f7eae6;
+  color: #f7eae6;
 }
 
 .checkbox-label .ball {
-    background-color: #f7eae6;
-    width: 22px;
-    height: 22px;
-    position: absolute;
-    left: 2px;
-    top: 2px;
-    border-radius: 50%;
-    transition: transform 0.2s linear;
+  background-color: #f7eae6;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
 }
 
 .checkbox:checked + .checkbox-label .ball {
-    transform: translateX(24px);
+  transform: translateX(24px);
 }
-
