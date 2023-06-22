@@ -86,7 +86,8 @@ const itemsObject = [
     itemName: "Edamame",
     itemTags: "Side",
     itemDescription: ["Nutritious and flavorful young soybean pods, lightly seasoned with salt, perfect as an appetizer or snack."],
-    itemPrice: "4,6",
+    itemPrice: ["€4"],
+    addToCart: ["Add to cart"]
   },
   {
     itemPic: "musubi.png",
@@ -122,7 +123,6 @@ const itemsObject = [
   },
   {
     itemPic: "falafelpoke.png",
-
     itemName: "Falafel Poke",
     itemTags: "Main course",
     itemDescription: [
@@ -164,50 +164,110 @@ const itemsObject = [
   },
 ];
 
-
 const dishesContainer = document.querySelector(".cardCollection");
+const shoppingCart = document.getElementById("cartPopUp")
 
-const displayCollection = (item) => {
+const displayCollection = (
+  itemPic,
+  itemName,
+  itemTags,
+  itemDescription,
+  itemPrice,
+  addToCart
+) => {
   const card = document.createElement("div");
   card.classList.add("card");
 
   const image = document.createElement("img");
-  image.src = item.itemPic;
-  image.classList.add("productImg");
+  image.src = itemPic;
+  image.classList.add("productImg")
   card.appendChild(image);
 
   const name = document.createElement("h2");
-  name.textContent = item.itemName;
+  name.textContent = itemName;
   card.appendChild(name);
 
   const tags = document.createElement("p");
-  tags.textContent = item.itemTags;
+  tags.textContent = itemTags;
   card.appendChild(tags);
 
   const description = document.createElement("p");
-  description.textContent = item.itemDescription[0];
+  description.textContent = itemDescription;
   card.appendChild(description);
 
   const price = document.createElement("div");
-  price.textContent = item.itemPrice;
+  price.textContent = itemPrice;
   price.classList.add("priceValue");
   card.appendChild(price);
 
   const addButton = document.createElement("button");
-  addButton.textContent = item.addToCart;
+  addButton.textContent = addToCart;
   addButton.classList.add("addToCart");
   card.appendChild(addButton);
 
   dishesContainer.appendChild(card);
 };
 
-const generateItemsObject = () => {
-  itemsObject.forEach((item) => {
-    displayCollection(item);
+const generateItemsObject = (items) => {
+  dishesContainer.innerHTML = ''; // Clear the existing items
+
+  items.forEach((dishes) => {
+    displayCollection(
+      dishes.itemPic,
+      dishes.itemName,
+      dishes.itemTags,
+      dishes.itemDescription,
+      dishes.itemPrice,
+      dishes.addToCart
+    );
   });
 };
 
-generateItemsObject();
+//filtering itens
+
+const displayFilteredItems = (items) => {
+  generateItemsObject(items);
+};
+
+generateItemsObject(itemsObject);
+
+const searchInput = document.getElementById("search-input");
+const searchButton = document.getElementById("search");
+
+searchButton.addEventListener("click", () => {
+  const searchTerm = searchInput.value.toLowerCase();
+  const filteredItems = itemsObject.filter((item) =>
+    item.itemName.toLowerCase().includes(searchTerm)
+  );
+
+  displayFilteredItems(filteredItems);
+});
+
+////////// Darkmodeswitch //////////////
+
+const checkbox = document.getElementById("checkbox");
+checkbox.addEventListener("change", () => {
+  document.body.classList.toggle("light")
+});
+
+//displaying shopping cart 
+
+document.addEventListener("DOMContentLoaded", function() {
+    const shoppingCartIcon = document.getElementById("cartIcon");
+    const shoppingCartPopup = document.getElementById("cartPopUp");
+  
+    shoppingCartIcon.addEventListener("click", function() {
+      if (shoppingCartPopup) {
+        if (shoppingCartPopup.style.display === "none") {
+          shoppingCartPopup.style.display = "block";
+        } else {
+          shoppingCartPopup.style.display = "none";
+        }
+      }
+    });
+  });
+  
+// //filtering buttons
 
 function filterObjects(category) {
   const cards = document.querySelectorAll(".card");
@@ -257,41 +317,5 @@ cards.forEach((card) => {
   tags.forEach((tag) => card.classList.add(tag.trim().toLowerCase()));
 });
 
-const checkbox = document.getElementById("checkbox");
-checkbox.addEventListener("change", () => {
-  document.body.classList.toggle("light");
-});
-//The checkbox.addEventListener("change", () => { ... }); line adds an event listener to the checkbox element. It listens for the "change" event, which occurs when the checkbox is checked or unchecked. When the event is triggered, the provided callback function is executed.
 
-//The arrow function () => { ... } is the callback function that runs when the checkbox's "change" event occurs.
-
-//Inside the callback function, document.body.classList.toggle("light") toggles the "light" class on the body element. The classList property provides access to the class attributes of an element. The toggle() method adds the "light" class to the body element if it is not present, and removes it if it is already present. This way, each time the checkbox is checked or unchecked, the "light" class is added or removed from the body element, effectively toggling the light mode.
-
-
-
-//open shopping cart popup - start
-
-document.addEventListener("DOMContentLoaded", ()=> {
-    const shoppingCartIcon = document.getElementById("cartIcon");
-    const shoppingCartPopup = document.getElementById("cartPopUp");
-  
-    shoppingCartIcon.addEventListener("click", ()=> {
-      if (shoppingCartPopup) {
-        if (shoppingCartPopup.style.display === "none") {
-          shoppingCartPopup.style.display = "block";
-        } else {
-          shoppingCartPopup.style.display = "none";
-        }
-      }
-    });
-  });
-  
-//open shopping cart popup - end  
-
-// const addToCart = card.querySelector(".addToCart");
-// const priceButton = card.querySelector(".priceValue");
-
-// addToCart.addEventListener("click", () => addToCart(dishes));
-
-// return card;
 
